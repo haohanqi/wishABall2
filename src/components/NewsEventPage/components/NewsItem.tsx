@@ -1,21 +1,33 @@
-import React from 'react'
-import { NewsListItemWrapper, NewsListItem } from './style'
-import {news} from './MoreNewsSection'
-const NewsItem = ({ title, date, blogDes}:news) => {
-	return (
-		<NewsListItemWrapper>
-			<NewsListItem>
-				<div className="blogWrapper">
-					<div className="blogInfo">
-						<div className="blogTitle">{title}</div>
-						<div className="blogDes">{date}</div>
-					</div>
-					<div className="blogDes">{blogDes}</div>
-				</div>
-				<div className="readMoreButton">Read More</div>
-			</NewsListItem>
-		</NewsListItemWrapper>
-	)
+import React, { FC } from 'react';
+import { Link } from 'gatsby';
+import { NewsListItemWrapper, NewsListItem } from './style';
+
+interface news {
+  excerpt: string;
+  frontmatter: {
+    title: string;
+    path: string;
+    date: string;
+  };
 }
 
-export default NewsItem
+const NewsItem: FC<news> = ({ excerpt, frontmatter }) => {
+  return (
+    <NewsListItemWrapper>
+      <NewsListItem>
+        <div className="blogWrapper">
+          <div className="blogInfo">
+            <div className="blogTitle">{frontmatter.title}</div>
+            <div className="blogDes">{frontmatter.date}</div>
+          </div>
+          <div className="blogDes">{excerpt}</div>
+        </div>
+        <Link to={frontmatter.path}>
+          <div className="readMoreButton">Read More</div>
+        </Link>
+      </NewsListItem>
+    </NewsListItemWrapper>
+  );
+};
+
+export default NewsItem;

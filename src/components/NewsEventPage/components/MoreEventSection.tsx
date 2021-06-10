@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { MoreNewsSectionWrapper, MoreNewsList } from './style';
-import NewsItem from './NewsItem';
+import EventItem from './EventItem';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const MoreNewsSection: FC = () => {
-  const news = useStaticQuery(graphql`
-    query blogList {
+const MoreEventSection: FC = () => {
+  const event = useStaticQuery(graphql`
+    query eventList {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/blog/" } }
+        filter: { fileAbsolutePath: { regex: "/event/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
@@ -26,14 +26,15 @@ const MoreNewsSection: FC = () => {
 
   return (
     <MoreNewsSectionWrapper>
-      <div className="headerTitle">More News</div>
+      <div className="headerTitle">More Event</div>
       <MoreNewsList>
-        {news.allMarkdownRemark.edges.map(({ node }, _) => {
-          return <NewsItem {...node} key={node.frontmatter.path} />;
+        {event.allMarkdownRemark.edges.map(({ node }, _) => {
+          console.log(node);
+          return <EventItem {...node} key={node.frontmatter.path} />;
         })}
       </MoreNewsList>
     </MoreNewsSectionWrapper>
   );
 };
 
-export default MoreNewsSection;
+export default MoreEventSection;
