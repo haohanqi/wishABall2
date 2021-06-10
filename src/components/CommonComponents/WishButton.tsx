@@ -1,18 +1,18 @@
-import React,{FC} from 'react'
-import { WishButtonLayout,WishButtonLayoutProps } from './style'
-import arrow from '../../images/Arrow.png'
+import React, { FC } from 'react';
+import { WishButtonLayout, WishButtonLayoutProps } from './style';
+import arrow from '../../images/arrow.png';
 
 type WishButtonProps = WishButtonLayoutProps & {
-	buttonText:string,
-}
+  buttonText: string;
+};
 
-const WishButton: FC<WishButtonProps> = ({buttonText,height,width}) => {
-	return (
-		<WishButtonLayout width={width} height={height}>
-			{buttonText}
-			<img className="arrow" src={arrow}/>
-		</WishButtonLayout>
-	)
-}
+const WishButton: FC<WishButtonProps> = ({ buttonText, height, width }) => {
+  return (
+    <WishButtonLayout width={width} height={height}>
+      {buttonText}
+      <img className="arrow" src={arrow} />
+    </WishButtonLayout>
+  );
+};
 
-export default WishButton
+export default WishButton;
