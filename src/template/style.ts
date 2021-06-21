@@ -97,12 +97,21 @@ export const NewsButton = styled.div`
     background-color: black;
     color: white;
   }
+
+  @media only screen and (max-width: 480px) {
+    width: 80px;
+    height: 30px;
+  }
 `;
 
 export const EventPageContainer = styled(NewsPageContainer)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media only screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const EventField = styled.div`
@@ -119,10 +128,25 @@ export const EventField = styled.div`
   .des {
     font-size: 1rem;
   }
+
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    margin-top: 20px;
+    .title {
+      font-size: 1rem;
+    }
+    .des {
+      font-size: 0.9rem;
+    }
+  }
 `;
 
 export const JoinButton = styled(NewsButton)`
   position: absolute;
   bottom: 35%;
   right: 5%;
+  @media only screen and (max-width: 480px) {
+    bottom: 0;
+    right: 5%;
+  }
 `;
