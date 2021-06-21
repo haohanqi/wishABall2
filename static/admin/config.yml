@@ -31,4 +31,4 @@ collections:
         }
       - { name: eventName, label: EventName, widget: string }
       - { name: location, label: Location, widget: string }
-      - { name: requirements, label: Requirements, widget: markdown }
+      - { name: body, label: Body, widget: markdown }
