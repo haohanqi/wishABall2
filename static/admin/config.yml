@@ -22,7 +22,7 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: important, label: Important, widget: string, required: false }
+      - { name: important, label: Important, widget: boolean }
       - {
           name: backgroundImage,
           label: BackgroundImage,
