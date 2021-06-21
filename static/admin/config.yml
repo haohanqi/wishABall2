@@ -7,10 +7,28 @@ public_folder: /assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: content/blog
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: event
+    label: Event
+    folder: content/event
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: important, label: Important, widget: string, required: false }
+      - {
+          name: backgroundImage,
+          label: BackgroundImage,
+          widget: string,
+          required: false,
+        }
+      - { name: eventName, label: EventName, widget: string }
+      - { name: location, label: Location, widget: string }
+      - { name: requirements, label: Requirements, widget: markdown }

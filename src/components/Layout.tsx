@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import Header from './CommonComponents/Header';
-import { GlobalStyle,BasicSection,BasicColor } from './BasicStyle';
+import { GlobalStyle, BasicSection, BasicColor } from './BasicStyle';
 import Footer from './CommonComponents/Footer';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Layout: FC = ({ children }) => (
   <PageLayoutWrapper backgroundColor={BasicColor.primaryColor} padding="0px">
-    <GlobalStyle/>
+    <GlobalStyle />
     <Header />
     <div>
       <main>{children}</main>
@@ -18,5 +18,5 @@ const Layout: FC = ({ children }) => (
 export default Layout;
 
 const PageLayoutWrapper = styled(BasicSection)`
-  overflow:hidden;
-`
+  overflow: hidden;
+`;

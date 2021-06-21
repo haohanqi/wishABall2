@@ -1,9 +1,9 @@
 ---
-path: /event/test
-date: 2020-02-13
+path: /event/test2
+date: 2020-02-14
 title: Event
-important: true
-backgroundImage: https://images.unsplash.com/photo-1550171362-62bca9e5ad4e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJhc2tldGJhbGx8ZW58MHwwfDB8&ixlib=rb-1.2.1&w=1000&q=80
+important: false
+backgroundImage: none
 eventName: North York 3vs3
 location: North York 18 spring ave
 ---

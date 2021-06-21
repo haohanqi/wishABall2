@@ -12,6 +12,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const newsTemplate = path.resolve(`src/template/newsPage.tsx`);
+  const eventTemplate = path.resolve(`src/template/eventPage.tsx`);
 
   const newsList = await graphql(`
   {
@@ -31,7 +32,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  if (newsList.error) {
+  const eventList = await graphql(`
+  {
+     allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/event/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
+        edges {
+          node {
+            excerpt
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (newsList.error || eventList.error) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return
   }
@@ -44,8 +63,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-
-
+  eventList.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: eventTemplate,
+      context: {}
+    })
+  })
 
 }
 

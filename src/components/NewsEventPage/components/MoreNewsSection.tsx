@@ -28,7 +28,7 @@ const MoreNewsSection: FC = () => {
     <MoreNewsSectionWrapper>
       <div className="headerTitle">More News</div>
       <MoreNewsList>
-        {news.allMarkdownRemark.edges.map(({ node }, _) => {
+        {news.allMarkdownRemark.edges.map(({ node }: any) => {
           return <NewsItem {...node} key={node.frontmatter.path} />;
         })}
       </MoreNewsList>

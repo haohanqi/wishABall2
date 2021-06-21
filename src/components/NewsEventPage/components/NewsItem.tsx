@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import { NewsListItemWrapper, NewsListItem } from './style';

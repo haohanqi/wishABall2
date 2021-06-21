@@ -28,8 +28,7 @@ const MoreEventSection: FC = () => {
     <MoreNewsSectionWrapper>
       <div className="headerTitle">More Event</div>
       <MoreNewsList>
-        {event.allMarkdownRemark.edges.map(({ node }, _) => {
-          console.log(node);
+        {event.allMarkdownRemark.edges.map(({ node }) => {
           return <EventItem {...node} key={node.frontmatter.path} />;
         })}
       </MoreNewsList>

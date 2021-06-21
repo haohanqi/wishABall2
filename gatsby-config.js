@@ -8,7 +8,8 @@ module.exports = {
       options: {
         fonts: [
           `Oswald\: 300,400,500,700`,
-          `Source Sans Pro\:300,400,500`
+          `Source Sans Pro\:300,400,500`,
+          `Shadows Into Light\:400`
         ],
         display: 'swap'
       }

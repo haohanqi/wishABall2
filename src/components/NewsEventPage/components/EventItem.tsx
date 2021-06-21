@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { FC } from 'react';
 import { EventListItemWrapper, EventListItem } from './style';
+import { Link } from 'gatsby';
+
 interface event {
   excerpt: string;
   frontmatter: {
@@ -33,7 +36,9 @@ const EventItem: FC<event> = ({ frontmatter }) => {
             <div className="blogTitle">{frontmatter.title}</div>
           </div>
         </div>
-        <div className="readMoreButton">Read More</div>
+        <Link to={frontmatter.path}>
+          <div className="readMoreButton">Read More</div>
+        </Link>
       </EventListItem>
     </EventListItemWrapper>
   );
