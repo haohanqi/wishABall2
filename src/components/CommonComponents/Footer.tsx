@@ -34,29 +34,30 @@ const Footer: FC = () => {
             mobileHidden={false}
           />
         </FooterLogoSection>
+        <div className="footerInfoWrapper">
+          <FooterInfo>
+            <h3 className="footerTitle">News & Events</h3>
+            <h4 className="footerText">Event</h4>
+            <h4 className="footerText">Program</h4>
+            <h4 className="footerText">Sport News</h4>
+          </FooterInfo>
 
-        <FooterInfo>
-          <h3 className="footerTitle">News & Events</h3>
-          <h4 className="footerText">Event</h4>
-          <h4 className="footerText">Program</h4>
-          <h4 className="footerText">Sport News</h4>
-        </FooterInfo>
+          <FooterInfo>
+            <h3 className="footerTitle">About</h3>
+            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">our story</h4>
+          </FooterInfo>
 
-        <FooterInfo>
-          <h3 className="footerTitle">About</h3>
-          <h4 className="footerText">our story</h4>
-          <h4 className="footerText">our story</h4>
-          <h4 className="footerText">our story</h4>
-          <h4 className="footerText">our story</h4>
-        </FooterInfo>
-
-        <FooterInfo className="footerInfo">
-          <h3 className="footerTitle">Contact Us</h3>
-          <h4 className="footerText">our story</h4>
-          <h4 className="footerText">our story</h4>
-          <h4 className="footerText">our story</h4>
-          <h4 className="footerText">our story</h4>
-        </FooterInfo>
+          <FooterInfo className="footerInfo">
+            <h3 className="footerTitle">Contact Us</h3>
+            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">our story</h4>
+          </FooterInfo>
+        </div>
 
         <FooterWishWrapper>
           <h1 className="wishTitle">Wish Search</h1>

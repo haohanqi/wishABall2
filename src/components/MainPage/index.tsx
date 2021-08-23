@@ -9,8 +9,8 @@ const MainPage = () => {
     <>
       <EntrySection />
       <NewsSection />
-      <WishSection />
       <AboutUsSection />
+      <WishSection />
     </>
   );
 };

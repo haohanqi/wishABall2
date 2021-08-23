@@ -41,7 +41,7 @@ const NewsSection = () => {
       <NewsSectionTitle>NEWS & EVENT</NewsSectionTitle>
       <AdverSlider />
       <Row justify="center" align="middle">
-        <Col xl={18} lg={18} md={22} sm={0} xs={0}>
+        <Col xl={18} lg={18} md={0} sm={0} xs={0}>
           <Carousel autoplay dotPosition="right" adaptiveHeight>
             {event
               ? event.allMarkdownRemark.edges.map(({ node }) => {
@@ -73,7 +73,7 @@ const NewsSection = () => {
         </Col>
 
         {/* Mobile version */}
-        <Col xl={0} lg={0} md={0} sm={22} xs={22}>
+        <Col xl={0} lg={0} md={22} sm={22} xs={22}>
           {event
             ? event.allMarkdownRemark.edges.map(({ node }) => {
                 if (node.frontmatter.important) {
@@ -104,7 +104,9 @@ const NewsSection = () => {
       </Row>
 
       <Row justify="center" align="middle">
-        <SeeMoreButton>See More</SeeMoreButton>
+        <SeeMoreButton>
+          <Link to="/newsPage">See More</Link>
+        </SeeMoreButton>
       </Row>
     </NewSectionWrapper>
   );

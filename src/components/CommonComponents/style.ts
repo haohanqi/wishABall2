@@ -27,7 +27,7 @@ export const HeaderWrapper = styled.section<HeaderProps>`
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  height: 100px;
+  min-height: 100px;
   width: 100%;
   padding: 0 2.5%;
   background-color: ${(props) => props.backgroundColor};
@@ -47,8 +47,14 @@ export const HeaderWrapper = styled.section<HeaderProps>`
     font-weight: bold;
   }
 
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 769px) {
     .navHamIcon {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .hbar {
       display: none;
     }
   }
@@ -131,7 +137,7 @@ export const NavBar = styled.nav`
     transition: all 0.3s linear;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     justify-content: flex-end;
     .navText {
       display: none;
@@ -158,7 +164,7 @@ export const LanguageTransButton = styled.div<languageTransButtonProps>`
     color: ${BasicColor.primaryColor};
   }
   transition: all 0.3s linear;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 1000px) {
     display: ${(props) => (props.mobileHidden ? 'none' : 'flex')};
   }
 `;
@@ -194,10 +200,6 @@ export const MobileNavMenuWrapper = styled.nav`
     text-align: center;
     color: #747474;
   }
-
-  @media only screen and (min-width: 480px) {
-    display: none;
-  }
 `;
 // Footer-----------------------------------------
 export const FooterWrapper = styled.footer`
@@ -210,6 +212,15 @@ export const FooterWrapper = styled.footer`
     width: 100%;
     min-height: 400px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footerInfoWrapper {
+    width: 100%;
+    display: flex;
+    flex: 3;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -238,6 +249,14 @@ export const FooterWrapper = styled.footer`
   }
 
   @media only screen and (max-width: 480px) {
+    .footerInfoWrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: space-around;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
     padding: 5%;
     .contentWrapper {
       flex-direction: column;

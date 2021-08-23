@@ -6,13 +6,9 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import Logo from './Logo';
 import SocialMediaGroup from './SocialMediaGroup';
-import {
-  HeaderWrapper,
-  NavBar,
-  LanguageTransButton,
-  MobileNavMenuWrapper,
-} from './style';
+import { HeaderWrapper, NavBar, MobileNavMenuWrapper } from './style';
 import { BasicColor } from '../BasicStyle';
+import { Link } from 'gatsby';
 
 import insIcon from '../../images/ins.png';
 import wechatIcon from '../../images/wechat.png';
@@ -64,7 +60,7 @@ const Header: FC = () => {
             />
           </Col>
 
-          <Col xl={21} lg={21} md={21} sm={0} xs={0}>
+          <Col xl={21} lg={21} md={0} sm={0} xs={0}>
             <div
               className="hbar"
               style={{
@@ -79,14 +75,14 @@ const Header: FC = () => {
           <Col
             xl={0}
             lg={0}
-            md={0}
+            md={{ span: 22 }}
             sm={{ span: 15, offset: 1 }}
             xs={{ span: 15, offset: 2 }}
           >
             <div className="mobileNavBarWrapper">
-              <LanguageTransButton mobileHidden={false}>
+              {/* <LanguageTransButton mobileHidden={true}>
                 中文
-              </LanguageTransButton>
+              </LanguageTransButton> */}
               <GiHamburgerMenu
                 className="navHamIcon"
                 onClick={showMobileNavMenu}
@@ -106,12 +102,16 @@ const Header: FC = () => {
             xs={0}
           >
             <NavBar>
-              <div className="navText">WISH</div>
-              <div className="navText">NEWS</div>
+              <Link to="/">
+                <div className="navText">ABOUT US</div>
+              </Link>
+              <Link to="newsPage">
+                <div className="navText">NEWS</div>
+              </Link>
               <div className="navText">PROGRAM</div>
               <div className="navText">CONTACT US</div>
               <div className="navText">MORE</div>
-              <LanguageTransButton mobileHidden={true} />
+              {/* <LanguageTransButton mobileHidden={true} /> */}
             </NavBar>
           </Col>
         </Row>
@@ -144,8 +144,12 @@ const MobileNavMenu = () => {
         onClick={closeMobileNavMenu}
       />
       <div className="mobileNavBar">
-        <div className="mobileNavItem">WISH</div>
-        <div className="mobileNavItem">NEWS</div>
+        <Link to="/">
+          <div className="mobileNavItem">ABOUT US</div>
+        </Link>
+        <Link to="newsPage">
+          <div className="mobileNavItem">NEWS</div>
+        </Link>
         <div className="mobileNavItem">CONTACT US</div>
         <div className="mobileNavItem">MORE</div>
         <SocialMediaGroup

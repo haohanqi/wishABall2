@@ -1,19 +1,17 @@
 import React from 'react';
 import { EntrySectionWrapper, CompanyInfo } from './style';
-import entrySection from '../../../images/entrySection.jpg';
+import main from '../../../images/main.jpg';
 import { BasicColor } from '../../BasicStyle';
 const EntrySection = () => {
   return (
     <EntrySectionWrapper
       backgroundColor={BasicColor.thirdColor}
-      imageUrl={entrySection}
+      imageUrl={main}
       padding="2%"
     >
       <CompanyInfo>
-        <div className="companyTitle">
-          OVERSEAS <br /> SPORTS & EDUCATION
-        </div>
-        <div className="companySlogan">PLAY AND LEARN ANYWHERE ANYTIME</div>
+        <div className="companyTitle"></div>
+        <div className="companySlogan"></div>
       </CompanyInfo>
     </EntrySectionWrapper>
   );

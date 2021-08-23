@@ -76,4 +76,5 @@ export const BasicSection = styled.section<BasicSectionProps>`
   background-image: url(${(props) => (props.imageUrl ? props.imageUrl : null)});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: -150px;
 `;

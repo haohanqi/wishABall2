@@ -21,7 +21,7 @@ const WishSection = () => {
   return (
     <WishSectionWrapper backgroundColor={BasicColor.primaryColor}>
       <Row justify="space-around" align="middle" style={{ minHeight: '100vh' }}>
-        <Col xl={5} lg={5} md={5} sm={22} xs={22}>
+        <Col xl={5} lg={5} md={16} sm={22} xs={22}>
           <WishInfoWrapper>
             <div className="wishTitle">
               <span>W</span>
@@ -42,7 +42,7 @@ const WishSection = () => {
             />
           </WishInfoWrapper>
         </Col>
-        <Col xl={5} lg={5} md={5} sm={24} xs={24}>
+        <Col xl={5} lg={5} md={16} sm={24} xs={24}>
           <WishImgWrapper>
             <PromoBox backgroundImage={wish} height="70%">
               <div className="promoTitle">BASKETBALL</div>
@@ -70,7 +70,7 @@ const WishSection = () => {
             </div>
           </WishImgWrapper>
         </Col>
-        <Col xl={8} lg={8} md={8} sm={24} xs={24}>
+        <Col xl={8} lg={8} md={16} sm={24} xs={24}>
           <WishButtonWrapper>
             <WishButton buttonText="Find Your Wish" />
           </WishButtonWrapper>

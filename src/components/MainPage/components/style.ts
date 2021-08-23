@@ -125,7 +125,7 @@ export const NewsPanelWrapper = styled.div<NewsPanel>`
     font-family: 'Source Sans Pro', sans-serif;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 1000px) {
     width: 100%;
     height: 200px;
     border-radius: 10px;
