@@ -38,7 +38,6 @@ const Logo: FC<LogoProps> = ({
           width={90}
           height={70}
           loading="eager"
-          imgClassName="loadImage"
         />
       )}
       <div className="divider" />

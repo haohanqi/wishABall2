@@ -105,11 +105,11 @@ const Header: FC = () => {
               <Link to="/">
                 <div className="navText">Home</div>
               </Link>
-              <Link to="newsPage">
+              <Link to="/newsPage">
                 <div className="navText">NEWS</div>
               </Link>
               <div className="navText">OSE PROGRAM</div>
-              <Link to="contactUsPage">
+              <Link to="/contactUsPage">
                 <div className="navText">CONTACT US</div>
               </Link>
 
@@ -150,10 +150,10 @@ const MobileNavMenu = () => {
         <Link to="/">
           <div className="mobileNavItem">ABOUT US</div>
         </Link>
-        <Link to="newsPage">
+        <Link to="/newsPage">
           <div className="mobileNavItem">NEWS</div>
         </Link>
-        <Link to="contactUsPage">
+        <Link to="/contactUsPage">
           <div className="mobileNavItem">CONTACT US</div>
         </Link>
         <div className="mobileNavItem">MORE</div>
