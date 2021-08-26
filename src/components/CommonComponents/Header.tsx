@@ -1,4 +1,4 @@
-import React, { useEffect, FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Row, Col } from 'antd';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,7 +9,6 @@ import SocialMediaGroup from './SocialMediaGroup';
 import { HeaderWrapper, NavBar, MobileNavMenuWrapper } from './style';
 import { BasicColor } from '../BasicStyle';
 import { Link } from 'gatsby';
-
 import insIcon from '../../images/ins.png';
 import wechatIcon from '../../images/wechat.png';
 import facebookIcon from '../../images/facebook.png';
@@ -17,15 +16,15 @@ import facebookIcon from '../../images/facebook.png';
 const Header: FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.anime-header', 0.6, {
-      scrollTrigger: {
-        trigger: '.anime-header',
-        // markers: true,
-        start: 'top -80',
-        toggleActions: 'play none reverse none',
-      },
-      opacity: 0,
-    });
+    //   gsap.to('.anime-header', 0.6, {
+    //     scrollTrigger: {
+    //       trigger: '.anime-header',
+    //       // markers: true,
+    //       start: 'top -80',
+    //       toggleActions: 'play none reverse none',
+    //     },
+    //     opacity: 0,
+    //   });
   }, []);
 
   const showMobileNavMenu = () => {
@@ -57,6 +56,7 @@ const Header: FC = () => {
               dividerWidth={2}
               logoTextSize={1.75}
               space={10}
+              small
             />
           </Col>
 
@@ -103,13 +103,16 @@ const Header: FC = () => {
           >
             <NavBar>
               <Link to="/">
-                <div className="navText">ABOUT US</div>
+                <div className="navText">Home</div>
               </Link>
               <Link to="newsPage">
                 <div className="navText">NEWS</div>
               </Link>
-              <div className="navText">PROGRAM</div>
-              <div className="navText">CONTACT US</div>
+              <div className="navText">OSE PROGRAM</div>
+              <Link to="contactUsPage">
+                <div className="navText">CONTACT US</div>
+              </Link>
+
               <div className="navText">MORE</div>
               {/* <LanguageTransButton mobileHidden={true} /> */}
             </NavBar>
@@ -150,7 +153,9 @@ const MobileNavMenu = () => {
         <Link to="newsPage">
           <div className="mobileNavItem">NEWS</div>
         </Link>
-        <div className="mobileNavItem">CONTACT US</div>
+        <Link to="contactUsPage">
+          <div className="mobileNavItem">CONTACT US</div>
+        </Link>
         <div className="mobileNavItem">MORE</div>
         <SocialMediaGroup
           imgs={[insIcon, wechatIcon, facebookIcon]}

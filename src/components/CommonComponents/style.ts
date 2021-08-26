@@ -15,6 +15,7 @@ export type LogoProps = {
   dividerHeight: number;
   logoTextSize: number;
   space: number;
+  small: boolean;
 };
 
 type languageTransButtonProps = {
@@ -68,11 +69,7 @@ export const LogoWrapper = styled.div<LogoProps>`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  .logoImage {
-    width: ${(props) => props.imageWidth + 'px'};
-    height: ${(props) => props.imageHeight + 'px'};
-    object-fit: contain;
-  }
+
   .divider {
     width: ${(props) => props.dividerWidth + 'px'};
     height: ${(props) => props.dividerHeight + 'px'};

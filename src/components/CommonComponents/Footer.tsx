@@ -26,6 +26,7 @@ const Footer: FC = () => {
             dividerWidth={3}
             logoTextSize={4.5}
             space={25}
+            small={false}
           />
           <div className="logoSlogan">Play and Learn Anywhere, Anytime</div>
           <SocialMediaGroup

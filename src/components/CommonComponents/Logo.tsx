@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { LogoWrapper, LogoProps } from './style';
-import OSELogo from '../../images/logo.png';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Logo: FC<LogoProps> = ({
   height,
@@ -10,7 +10,8 @@ const Logo: FC<LogoProps> = ({
   imageWidth,
   logoTextSize,
   space,
-}) => {
+  small,
+}: LogoProps) => {
   return (
     <LogoWrapper
       height={height}
@@ -20,8 +21,26 @@ const Logo: FC<LogoProps> = ({
       dividerWidth={dividerWidth}
       logoTextSize={logoTextSize}
       space={space}
+      small={small}
     >
-      <img className="logoImage" src={OSELogo} alt="OSE Logo" />
+      {small ? (
+        <StaticImage
+          src={'../../images/logo.png'}
+          alt="OSE Logo"
+          width={40}
+          height={30}
+          loading="eager"
+        />
+      ) : (
+        <StaticImage
+          src={'../../images/logo.png'}
+          alt="OSE Logo"
+          width={90}
+          height={70}
+          loading="eager"
+          imgClassName="loadImage"
+        />
+      )}
       <div className="divider" />
       <div className="logoText">OSE</div>
     </LogoWrapper>
