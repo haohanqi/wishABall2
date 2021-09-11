@@ -2,6 +2,8 @@
 path: /event/one
 date: 2021-09-11T17:19:12.712Z
 title: 2021 Summer 1 on 1 Basketball & Fitness Training
+important: true
+backgroundImage: ./
 eventName: 6-13 YEARS OLD BASKETBALL TRAING
 location: See Appointments Links
 ---
