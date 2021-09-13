@@ -12,6 +12,7 @@ import WishButton from '../CommonComponents/WishButton';
 import wechat from '../../images/wechat.png';
 import ins from '../../images/ins.png';
 import facebook from '../../images/facebook.png';
+import { Link } from 'gatsby';
 
 const Footer: FC = () => {
   return (
@@ -38,25 +39,33 @@ const Footer: FC = () => {
         <div className="footerInfoWrapper">
           <FooterInfo>
             <h3 className="footerTitle">News & Events</h3>
-            <h4 className="footerText">Event</h4>
-            <h4 className="footerText">Program</h4>
-            <h4 className="footerText">Sport News</h4>
+            <h4 className="footerText">
+              <Link to="/newsPage">Event</Link>
+            </h4>
+            <h4 className="footerText">
+              <a href="https://oseca.square.site/">Program</a>
+            </h4>
+            <h4 className="footerText">
+              <Link to="/newsPage">Sport News</Link>
+            </h4>
           </FooterInfo>
 
           <FooterInfo>
-            <h3 className="footerTitle">About</h3>
-            <h4 className="footerText">our story</h4>
-            <h4 className="footerText">our story</h4>
-            <h4 className="footerText">our story</h4>
-            <h4 className="footerText">our story</h4>
+            <h3 className="footerTitle">Partners</h3>
+            <h4 className="footerText">
+              <a href="https://www.basketball.ca/en/development/jr-nba-youth-basketball?gclid=CjwKCAjwyvaJBhBpEiwA8d38vGxxIty_-KeJxeW4QD57P9K-TkDSGj_6NDxcpQkP6j6pcqTAO2ScMRoCQwkQAvD_BwE">
+                JR NBA
+              </a>
+            </h4>
+            <h4 className="footerText">
+              <a href="https://oseca.square.site/">OSE membership</a>
+            </h4>
           </FooterInfo>
 
           <FooterInfo className="footerInfo">
             <h3 className="footerTitle">Contact Us</h3>
-            <h4 className="footerText">our story</h4>
-            <h4 className="footerText">our story</h4>
-            <h4 className="footerText">our story</h4>
-            <h4 className="footerText">our story</h4>
+            <h4 className="footerText">info@osecanada.com</h4>
+            <h4 className="footerText">6478295577</h4>
           </FooterInfo>
         </div>
 

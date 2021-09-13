@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 module.exports = {
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
   // don't need to define it here (just if you need to change the options)
@@ -32,6 +33,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-image`
+    `gatsby-plugin-image`,
+    `gatsby-plugin-preact`
   ],
 };

@@ -1,22 +1,25 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
-import {
-  NewsBanner,
-  EventPageContainer,
-  NewTitle,
-  EventField,
-  JoinButton,
-} from './style';
-import oseLogo from '../images/OSELogo@3x.png';
+import { NewsBanner, EventPageContainer, NewTitle, EventField } from './style';
+import { StaticImage } from 'gatsby-plugin-image';
+
 const EventPage = ({ data }) => {
   const { title, date, location } = data.markdownRemark.frontmatter;
 
   return (
     <>
       <NewsBanner>
-        <img className="companyLogo" src={oseLogo} />
-        <JoinButton>Join</JoinButton>
+        <div className="companyLogo">
+          <StaticImage
+            src={'../images/logo.png'}
+            alt="OSE Logo"
+            width={90}
+            height={70}
+            layout="fixed"
+            loading="eager"
+          />
+        </div>
         <div className="titleContainer">
           <NewTitle>{title}</NewTitle>
         </div>

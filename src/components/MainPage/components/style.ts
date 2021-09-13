@@ -7,6 +7,9 @@ import {
   SmallText,
   BasicColor,
 } from '../../BasicStyle';
+import wish from 'images/background1.png';
+import wish2 from 'images/background2.jpg';
+import wish3 from 'images/background3.jpg';
 
 // Entry Section style
 export const EntrySectionWrapper = styled(BasicSection)`
@@ -175,7 +178,7 @@ export const WishInfoWrapper = styled(BasicWishInfoWrapper)`
     font-size: 8rem;
     font-weight: 700;
     line-height: 80%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
 
   .wishDescription {
@@ -389,25 +392,39 @@ export const AboutUsContentWrapper = styled.div`
     row-gap: 10px;
     column-gap: 5px;
     margin-bottom: 30px;
-    overflow: hidden;
   }
 
   .imgItem-3 {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    background-color: #848484;
+    padding: 10px;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    background-image: url(${wish});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .imgItem-4 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    background-color: #848484;
+    padding: 10px;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    background-image: url(${wish2});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .imgItem-5 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background-color: #848484;
+    padding: 10px;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    background-image: url(${wish3});
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .workWithUsWrapper {
@@ -465,22 +482,16 @@ export const AboutUsContentWrapper = styled.div`
     .imgItem-3 {
       grid-column: 1 / 4;
       grid-row: 3 / 7;
-      background-color: #848484;
-      border-radius: 1rem;
     }
 
     .imgItem-4 {
       grid-column: 4 / 5;
       grid-row: 3 / 5;
-      background-color: #848484;
-      border-radius: 1rem;
     }
 
     .imgItem-5 {
       grid-column: 4 / 5;
       grid-row: 5 / 7;
-      background-color: #848484;
-      border-radius: 1rem;
     }
     .workWithUsWrapper {
       width: 100%;

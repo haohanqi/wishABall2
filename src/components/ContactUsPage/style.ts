@@ -6,6 +6,11 @@ export const ContactUsPageContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    max-height: 900px;
+  }
 `;
 
 export const ContactUsSection = styled.div`
@@ -54,5 +59,15 @@ export const ContactFormSection = styled(ContactUsSection)`
       padding-left: 10px;
       margin-bottom: 5%;
     }
+  }
+
+  @media only screen and (max-width: 480px) {
+    form {
+      .formInput {
+        width: 90%;
+      }
+      textarea{
+         width: 90%; 
+      }
   }
 `;

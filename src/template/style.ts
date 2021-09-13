@@ -13,7 +13,7 @@ export const NewsBanner = styled.div`
     position: absolute;
     top: 20px;
     right: 40px;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: Shadows Into Light, cursive;
     transform: rotate(5deg);
   }
@@ -29,10 +29,7 @@ export const NewsBanner = styled.div`
     position: absolute;
     bottom: -50px;
     left: 10%;
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
-    object-fit: cover;
   }
 
   @media only screen and (max-width: 480px) {
@@ -58,10 +55,14 @@ export const NewsPageContainer = styled.section`
   width: 100%;
   padding: 5% 10%;
   background-color: '#fafafa';
+
+  @media only screen and (max-width: 480px) {
+    padding: 10% 10%;
+  }
 `;
 
 export const NewTitle = styled.h1`
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: black;
   font-weight: bold;
   margin-bottom: 0;
@@ -106,7 +107,6 @@ export const NewsButton = styled.div`
 
 export const EventPageContainer = styled(NewsPageContainer)`
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
 
   @media only screen and (max-width: 480px) {
@@ -117,6 +117,7 @@ export const EventPageContainer = styled(NewsPageContainer)`
 export const EventField = styled.div`
   min-width: 200px;
   margin-bottom: 20px;
+  margin-right: 40px;
 
   .title {
     font-size: 2rem;

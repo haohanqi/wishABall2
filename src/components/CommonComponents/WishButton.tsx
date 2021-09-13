@@ -4,9 +4,19 @@ import arrow from '../../images/arrow.png';
 
 type WishButtonProps = WishButtonLayoutProps & {
   buttonText: string;
+  height?: string;
+  width?: string;
 };
 
-const WishButton: FC<WishButtonProps> = ({ buttonText, height, width }) => {
+const WishButton: FC<WishButtonProps> = ({
+  buttonText,
+  height,
+  width,
+}: {
+  buttonText: string;
+  height?: string;
+  width?: string;
+}) => {
   return (
     <WishButtonLayout width={width} height={height}>
       {buttonText}

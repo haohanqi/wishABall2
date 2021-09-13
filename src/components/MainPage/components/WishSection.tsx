@@ -30,10 +30,14 @@ const WishSection = () => {
               <span>h</span>
             </div>
             <p className="wishDescription">
-              ply dummy text of the printing and typesetting industry. Lorem
-              Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
+              Wish a sport supports the community with easy access to sports and
+              wellbeing. This program provides resources for community members
+              and tools to participate in sports such as a space to play
+              organized sports, and training. We are a firm believer in
+              investing in young leaders, which through our program, we offer
+              opportunities for members to take on leadership roles such as
+              coaching and various volunteer opportunities within the
+              organization.
             </p>
 
             <SocialMediaGroup

@@ -23,6 +23,10 @@ const AboutUsSection = () => {
     title,
     des,
     children,
+  }: {
+    title: string;
+    des: string;
+    children: React.ReactNode;
   }) => {
     return (
       <div className="workWithUsItem">
@@ -49,6 +53,7 @@ const AboutUsSection = () => {
                 dividerWidth={3}
                 logoTextSize={3.5}
                 space={25}
+                small={false}
               />
               <div className="logoSlogan">Play and Learn Anywhere, Anytime</div>
             </div>
@@ -65,12 +70,11 @@ const AboutUsSection = () => {
             <div className="aboutUsIntroWrapper">
               <h1 className="aboutUsIntroTitle">ABOUT US</h1>
               <p className="aboutUsIntroDes">
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived
-                not only five centuries, but also the leap into electronic
-                typesetting, remain
+                OSE [Overseas Sports and Education Inc.] serves as a
+                multi-platform organization which focuses on sports and
+                wellness; sporting news; culture and education; as well as
+                providing resources for studying abroads. At OSE, we are a
+                reliable and trustful platform to find all useful resources.
               </p>
             </div>
 
@@ -87,11 +91,8 @@ const AboutUsSection = () => {
                 backgroundImage={entrySection}
               >
                 <div className="imageContentWrapper">
-                  <h3 className="imageCoverTilte">Wish A Ball</h3>
-                  <p className="imageCoverDes">
-                    ake a type specimen book. It has survived not only five
-                    centuries, but also the leap into electronic{' '}
-                  </p>
+                  <h3 className="imageCoverTilte">Wish A Sport</h3>
+                  <p className="imageCoverDes">Find a sport you like to do</p>
                 </div>
               </ImageItem>
               <ImageItem
@@ -108,14 +109,19 @@ const AboutUsSection = () => {
                 <div className="imageContentWrapper">
                   <h3 className="imageCoverTilte">Wish A Book</h3>
                   <p className="imageCoverDes">
-                    ake a type specimen book. It has survived not only five
-                    centuries, but also the leap into electronic{' '}
+                    Find Subject you like to learn
                   </p>
                 </div>
               </ImageItem>
-              <div className="imgItem-3"></div>
-              <div className="imgItem-4"></div>
-              <div className="imgItem-5"></div>
+              <div className="imgItem-3">
+                <h3>Wish A Dream</h3>
+              </div>
+              <div className="imgItem-4">
+                <h3>Wish A Win</h3>
+              </div>
+              <div className="imgItem-5">
+                <h3>Wish A Team</h3>
+              </div>
             </div>
 
             <div className="workWithUsWrapper">

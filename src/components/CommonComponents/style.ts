@@ -309,6 +309,10 @@ export const FooterInfo = styled.div`
   justify-content: flex-start;
   align-items: center;
 
+  a {
+    color: #747474;
+  }
+
   @media only screen and (max-width: 768px) {
     align-items: center;
   }

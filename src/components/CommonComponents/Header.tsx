@@ -16,15 +16,6 @@ import facebookIcon from '../../images/facebook.png';
 const Header: FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    //   gsap.to('.anime-header', 0.6, {
-    //     scrollTrigger: {
-    //       trigger: '.anime-header',
-    //       // markers: true,
-    //       start: 'top -80',
-    //       toggleActions: 'play none reverse none',
-    //     },
-    //     opacity: 0,
-    //   });
   }, []);
 
   const showMobileNavMenu = () => {
@@ -108,12 +99,13 @@ const Header: FC = () => {
               <Link to="/newsPage">
                 <div className="navText">NEWS</div>
               </Link>
-              <div className="navText">OSE PROGRAM</div>
+              <Link to="https://oseca.square.site/s/appointments">
+                <div className="navText">OSE PROGRAM</div>
+              </Link>
               <Link to="/contactUsPage">
                 <div className="navText">CONTACT US</div>
               </Link>
-
-              <div className="navText">MORE</div>
+              <div className="navText">COMING SOON</div>
               {/* <LanguageTransButton mobileHidden={true} /> */}
             </NavBar>
           </Col>
@@ -139,6 +131,12 @@ const MobileNavMenu = () => {
         overflowY: 'scroll',
       });
   };
+
+  useEffect(() => {
+    gsap.timeline().to('body', {
+      overflowY: 'scroll',
+    });
+  }, []);
 
   return (
     <MobileNavMenuWrapper className="MobileNavMenuWrapper">

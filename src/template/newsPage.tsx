@@ -8,14 +8,24 @@ import {
   NewDate,
   NewsButton,
 } from './style';
-import oseLogo from '../images/OSELogo@3x.png';
+import oseLogo from 'images/logo.png';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const NewsPage = ({ data }) => {
   const { title, date } = data.markdownRemark.frontmatter;
   return (
     <>
       <NewsBanner>
-        <img className="companyLogo" src={oseLogo} />
+        <div className="companyLogo">
+          <StaticImage
+            src={'../images/logo.png'}
+            alt="OSE Logo"
+            width={90}
+            height={70}
+            layout="fixed"
+            loading="eager"
+          />
+        </div>
         <div className="logoTitle">Wish A Ball</div>
         <div className="titleContainer">
           <NewTitle>{title}</NewTitle>

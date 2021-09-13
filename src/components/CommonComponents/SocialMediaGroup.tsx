@@ -12,8 +12,7 @@ const SocialMediaGroup: FC<SocialMediaGroupProps> = ({
   imgs,
   width,
   height,
-  mobileHidden,
-}) => {
+}: SocialMediaGroupProps) => {
   return (
     <SocialMediaGroupWrapper width={width} height={height}>
       {imgs.map((src) => (

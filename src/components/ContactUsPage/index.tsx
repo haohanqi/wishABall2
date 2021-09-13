@@ -5,7 +5,6 @@ import {
   ContactFormSection,
 } from './style';
 import { StaticImage } from 'gatsby-plugin-image';
-//import wish2 from 'images/wish2.jpg';
 
 const ContactUsPage = () => {
   return (
