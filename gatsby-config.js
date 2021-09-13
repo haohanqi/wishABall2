@@ -34,6 +34,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-preact`
+    `gatsby-plugin-preact`,
+    `gatsby-plugin-styled-components`
   ],
+
 };
