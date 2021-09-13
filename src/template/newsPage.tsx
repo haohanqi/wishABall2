@@ -8,7 +8,6 @@ import {
   NewDate,
   NewsButton,
 } from './style';
-import oseLogo from 'images/logo.png';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const NewsPage = ({ data }) => {
