@@ -225,6 +225,8 @@ export const FooterWrapper = styled.footer`
 
   .footerTitle {
     ${SmallTitle};
+    min-width: 128px;
+    text-align: center;
     font-weight: 900;
     margin-bottom: 10px;
     color: ${BasicColor.secondaryColor};

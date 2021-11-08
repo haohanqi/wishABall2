@@ -3,26 +3,36 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { NewsBanner, EventPageContainer, NewTitle, EventField } from './style';
 import { StaticImage } from 'gatsby-plugin-image';
+import SEO from '@/components/CommonComponents/SEO';
 
 const EventPage = ({ data }) => {
   const { title, date, location } = data.markdownRemark.frontmatter;
 
   return (
     <>
+      <SEO
+        title={title}
+        keywords={[
+          `${title}`,
+          `${location}`,
+          `${date}`,
+          'OSE Events Page',
+          'Overseas Sports And Education Events',
+          'OSE Event',
+        ]}
+      />
       <NewsBanner>
         <div className="companyLogo">
           <StaticImage
             src={'../images/logo.png'}
             alt="OSE Logo"
-            width={90}
-            height={70}
+            width={70}
+            height={55}
             layout="fixed"
             loading="eager"
           />
         </div>
-        <div className="titleContainer">
-          <NewTitle>{title}</NewTitle>
-        </div>
+        <NewTitle>{title}</NewTitle>
       </NewsBanner>
       <EventPageContainer>
         <div>
@@ -36,7 +46,10 @@ const EventPage = ({ data }) => {
           </EventField>
         </div>
 
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div
+          style={{ width: '100%', maxWidth: '500px' }}
+          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+        />
       </EventPageContainer>
     </>
   );

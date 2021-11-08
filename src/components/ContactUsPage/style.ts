@@ -7,18 +7,20 @@ export const ContactUsPageContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 900px) {
     flex-direction: column;
-    max-height: 900px;
+    height: auto;
   }
 `;
 
 export const ContactUsSection = styled.div`
   width: 100%;
-  height: 100vh;
+  min-width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 30px;
+  padding: 2.5%;
 `;
 
 export const ContactFormSection = styled(ContactUsSection)`
@@ -38,6 +40,7 @@ export const ContactFormSection = styled(ContactUsSection)`
 
     .formInput {
       width: 50%;
+      min-width:235px;
       height: 40px;
       border: 2px solid black;
       padding-left: 10px;
@@ -54,12 +57,14 @@ export const ContactFormSection = styled(ContactUsSection)`
 
     textarea {
       width: 50%;
+      min-width:235px;
       height: 300px;
       border: 2px solid black;
       padding-left: 10px;
       margin-bottom: 5%;
     }
   }
+
 
   @media only screen and (max-width: 480px) {
     form {

@@ -27,8 +27,8 @@ const Logo: FC<LogoProps> = ({
         <StaticImage
           src={'../../images/logo.png'}
           alt="OSE Logo"
-          width={40}
-          height={30}
+          width={50}
+          height={40}
           loading="eager"
         />
       ) : (

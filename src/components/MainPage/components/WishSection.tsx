@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'antd';
 import {
   WishSectionWrapper,
@@ -10,6 +10,7 @@ import {
 import SocialMediaGroup from '../../CommonComponents/SocialMediaGroup';
 import WishButton from '../../CommonComponents/WishButton';
 import { BasicColor } from '../../BasicStyle';
+import BasicVideoModal from './BasicVideoModal';
 import wechat from '../../../images/wechat.png';
 import ins from '../../../images/ins.png';
 import facebook from '../../../images/facebook.png';
@@ -18,10 +19,29 @@ import wish2 from '../../../images/wish2.jpg';
 import wish3 from '../../../images/wish3.jpg';
 
 const WishSection = () => {
+  const [open, setOpen] = useState(false);
+  const [openOseKidModal, setOpenOseKidModal] = useState(false);
+  const [openOseTeamModal, setOpenTeamKidModal] = useState(false);
+
   return (
     <WishSectionWrapper backgroundColor={BasicColor.primaryColor}>
+      <BasicVideoModal
+        open={open}
+        setOpen={setOpen}
+        videoSrc="https://www.youtube.com/embed/3l3UR-GjRGQ"
+      />
+      <BasicVideoModal
+        open={openOseKidModal}
+        setOpen={setOpenOseKidModal}
+        videoSrc="https://www.youtube.com/embed/3Z-izRLX35k"
+      />
+      <BasicVideoModal
+        open={openOseTeamModal}
+        setOpen={setOpenTeamKidModal}
+        videoSrc="https://www.youtube.com/embed/TviHrZ2hAEQ"
+      />
       <Row justify="space-around" align="middle" style={{ minHeight: '100vh' }}>
-        <Col xl={5} lg={5} md={16} sm={22} xs={22}>
+        <Col xl={6} lg={6} md={16} sm={22} xs={22}>
           <WishInfoWrapper>
             <div className="wishTitle">
               <span>W</span>
@@ -46,11 +66,17 @@ const WishSection = () => {
             />
           </WishInfoWrapper>
         </Col>
-        <Col xl={5} lg={5} md={16} sm={24} xs={24}>
+        <Col xl={6} lg={6} md={16} sm={24} xs={24}>
           <WishImgWrapper>
-            <PromoBox backgroundImage={wish} height="70%">
-              <div className="promoTitle">BASKETBALL</div>
-              <div className="promoDes">This is a promation</div>
+            <PromoBox
+              backgroundImage={wish}
+              height="70%"
+              onClick={() => {
+                setOpen(true);
+              }}
+            >
+              <div className="promoTitle">OSE BASKETBALL</div>
+              <div className="promoDes">Oversea Sports and Education</div>
             </PromoBox>
             <div className="promoRow">
               <PromoBox
@@ -58,25 +84,31 @@ const WishSection = () => {
                 width="48%"
                 height="100%"
                 small={true}
+                onClick={() => {
+                  setOpenOseKidModal(true);
+                }}
               >
-                <div className="promoTitle">Hockey</div>
-                <div className="promoDes">This is a promation</div>
+                <div className="promoTitle">OBA Kid</div>
+                <div className="promoDes">OBA Kids Training</div>
               </PromoBox>
               <PromoBox
                 backgroundImage={wish2}
                 width="48%"
                 height="100%"
                 small={true}
+                onClick={() => {
+                  setOpenTeamKidModal(true);
+                }}
               >
-                <div className="promoTitle">Volleyball</div>
-                <div className="promoDes">This is a promation</div>
+                <div className="promoTitle">OBA</div>
+                <div className="promoDes">Oversea BasketBall Team</div>
               </PromoBox>
             </div>
           </WishImgWrapper>
         </Col>
-        <Col xl={8} lg={8} md={16} sm={24} xs={24}>
+        <Col xl={6} lg={6} md={16} sm={24} xs={24}>
           <WishButtonWrapper>
-            <WishButton buttonText="Find Your Wish" />
+            <WishButton buttonText="Find Your Wish"></WishButton>
           </WishButtonWrapper>
         </Col>
       </Row>

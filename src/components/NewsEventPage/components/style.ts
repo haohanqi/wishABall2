@@ -74,31 +74,45 @@ export const NewsListItem = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  padding: 15px;
 
   .blogWrapper {
     width: 50%;
+    min-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 25px;
+    flex-shrink: 0;
   }
 
   .blogInfo {
     flex: 1;
     display: flex;
+    min-width: 160px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin-right: 10px;
   }
 
   .blogTitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    min-width: 300px;
+    flex-shrink: 0;
   }
 
   .blogDes {
     flex: 1;
+    min-width: 170px;
     font-size: 0.85rem;
     color: #8c8c8c;
+    margin-right: 10px;
+    flex-shrink: 0;
   }
 
   .readMoreButton {
@@ -112,8 +126,6 @@ export const NewsListItem = styled.div`
     color: white;
     font-size: 0.85rem;
     cursor: pointer;
-    &:hover {
-    }
   }
 
   @media only screen and (max-width: 480px) {
@@ -124,10 +136,26 @@ export const NewsListItem = styled.div`
 
     .blogWrapper {
       width: 100%;
+      min-width: 320px;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 2rem;
+    }
+
+    .blogTitle {
+      max-width: 95%;
+      min-width: auto;
+    }
+
+    .blogDes {
+      max-width: 90%;
+      min-width: auto;
+    }
+
+    .blogInfo {
+      max-width: 90%;
+      min-width: auto;
     }
 
     .readMoreButton {

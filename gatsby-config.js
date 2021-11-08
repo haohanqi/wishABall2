@@ -2,6 +2,12 @@
 module.exports = {
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
   // don't need to define it here (just if you need to change the options)
+  siteMetadata: {
+    title: `OSE Sports and Education`,
+    author: `Hanqi Hao`,
+    description: `OSE [Overseas Sports and Education Inc.] serves as a multi-platform organization which focuses on sports and wellness; sporting news; culture and education; as well as providing resources for studying abroads. At OSE, we are a reliable and trustful platform to find all useful resources.`,
+    siteUrl: 'https://gatsby-seo-example.netlify.com',
+  },
   plugins: [
     'gatsby-plugin-antd',
     {

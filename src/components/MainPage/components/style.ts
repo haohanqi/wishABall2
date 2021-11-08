@@ -14,6 +14,8 @@ import wish3 from 'images/background3.jpg';
 // Entry Section style
 export const EntrySectionWrapper = styled(BasicSection)`
   position: relative;
+  height: auto;
+  min-height: auto;
   @media only screen and (max-width: 480px) {
     margin-top: 130px;
     height: 300px;
@@ -72,10 +74,9 @@ type NewsPanel = {
 
 export const NewsPanelWrapper = styled.div<NewsPanel>`
   width: 80%;
-  padding: 2.5%;
+  padding: 0 2.5%;
   position: relative;
   height: 500px;
-  margin: 20px 0px;
   border-radius: 20px;
   box-sizing: border-box;
 
@@ -122,6 +123,7 @@ export const NewsPanelWrapper = styled.div<NewsPanel>`
   .panelTitle {
     font-size: 5rem;
     font-weight: 700;
+    text-align: center;
   }
   .panelDate {
     ${SmallText};
@@ -183,6 +185,7 @@ export const WishInfoWrapper = styled(BasicWishInfoWrapper)`
 
   .wishDescription {
     width: 90%;
+    min-width: 300px;
     ${SmallText};
     line-height: 2;
     color: ${BasicColor.secondaryColor};
@@ -346,6 +349,10 @@ export const AboutUsTitleWrapper = styled.div`
     margin-bottom: 30px;
     letter-spacing: 2px;
   }
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const AboutUsContentWrapper = styled.div`
@@ -468,6 +475,18 @@ export const AboutUsContentWrapper = styled.div`
     font-size: 0.7rem;
   }
 
+  @media only screen and (max-width: 800px) {
+    .imgItem-3 {
+      grid-column: 2 / 4;
+    }
+    .imgItem-4 {
+      display: none;
+    }
+    .imgItem-5 {
+      display: none;
+    }
+  }
+
   @media only screen and (max-width: 480px) {
     .aboutUsIntroDes {
       width: 90%;
@@ -480,7 +499,7 @@ export const AboutUsContentWrapper = styled.div`
     }
 
     .imgItem-3 {
-      grid-column: 1 / 4;
+      grid-column: 1 / 6;
       grid-row: 3 / 7;
     }
 
@@ -560,6 +579,7 @@ export const ImageItem = styled.div<ImageItemProps>`
     color: ${BasicColor.primaryColor};
     opacity: 0;
     transition: all 0.4s linear;
+    margin-bottom: 20px;
   }
 
   &:hover {

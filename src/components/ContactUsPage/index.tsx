@@ -5,15 +5,18 @@ import {
   ContactFormSection,
 } from './style';
 import { StaticImage } from 'gatsby-plugin-image';
+import SEO from 'components/CommonComponents/SEO';
 
 const ContactUsPage = () => {
   return (
     <ContactUsPageContainer>
+      <SEO keywords={['OSE Contact Page', 'OSE Contact Us']} />
       <ContactUsSection>
         <StaticImage
-          src="../../images/wish2.jpg"
+          src="../../images/main.jpg"
           alt="us"
           width={600}
+          height={380}
           loading="lazy"
           backgroundColor="transparent"
         />

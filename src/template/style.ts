@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const NewsBanner = styled.div`
   width: 100%;
+  min-width: 320px;
   min-height: 200px;
   background-color: #f5f5f5;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 10%;
   align-items: center;
 
   .logoTitle {
@@ -18,16 +20,9 @@ export const NewsBanner = styled.div`
     transform: rotate(5deg);
   }
 
-  .titleContainer {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
   .companyLogo {
     position: absolute;
-    bottom: -50px;
+    bottom: -20px;
     left: 10%;
     border-radius: 50%;
   }
@@ -53,8 +48,11 @@ export const NewsBanner = styled.div`
 
 export const NewsPageContainer = styled.section`
   width: 100%;
+  min-width: 320px;
   padding: 5% 10%;
   background-color: '#fafafa';
+  column-gap: 30px;
+  row-gap: 30px;
 
   @media only screen and (max-width: 480px) {
     padding: 10% 10%;
@@ -66,7 +64,6 @@ export const NewTitle = styled.h1`
   color: black;
   font-weight: bold;
   margin-bottom: 0;
-  margin-right: 20px;
 
   @media only screen and (max-width: 480px) {
     font-size: 1.5rem;
@@ -117,11 +114,11 @@ export const EventPageContainer = styled(NewsPageContainer)`
 export const EventField = styled.div`
   min-width: 200px;
   margin-bottom: 20px;
-  margin-right: 40px;
 
   .title {
     font-size: 2rem;
     font-weight: 600;
+    margin-top: 10px;
     margin-right: 20px;
     margin-bottom: 10px;
   }
@@ -132,6 +129,8 @@ export const EventField = styled.div`
 
   @media only screen and (max-width: 480px) {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 20px;
     .title {
       font-size: 1rem;

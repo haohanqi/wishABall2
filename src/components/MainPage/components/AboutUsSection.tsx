@@ -9,6 +9,8 @@ import {
 } from './style';
 import { BasicColor } from '../../BasicStyle';
 import entrySection from '../../../images/entrySection.jpg';
+import readSection from '../../../images/read.jpg';
+
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { RiUserSearchFill, RiTeamFill } from 'react-icons/ri';
 import { FaHandshake } from 'react-icons/fa';
@@ -42,7 +44,7 @@ const AboutUsSection = () => {
   return (
     <AboutUsWrapper backgroundColor={BasicColor.primaryColor}>
       <Row justify="space-around" align="top">
-        <Col xl={8} lg={8} sm={0} xs={0}>
+        <Col xl={8} lg={0} md={0} sm={0} xs={0}>
           <AboutUsTitleWrapper>
             <div>
               <Logo
@@ -65,7 +67,7 @@ const AboutUsSection = () => {
           </AboutUsTitleWrapper>
         </Col>
 
-        <Col xl={16} lg={16} md={16} sm={24} xs={24}>
+        <Col xl={16} lg={24} md={24} sm={24} xs={24}>
           <AboutUsContentWrapper>
             <div className="aboutUsIntroWrapper">
               <h1 className="aboutUsIntroTitle">ABOUT US</h1>
@@ -104,7 +106,7 @@ const AboutUsSection = () => {
                 mobileEndCol={'5'}
                 mobileStartRow={'1'}
                 mobileEndRow={'3'}
-                backgroundImage={entrySection}
+                backgroundImage={readSection}
               >
                 <div className="imageContentWrapper">
                   <h3 className="imageCoverTilte">Wish A Book</h3>

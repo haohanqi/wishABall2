@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */
 import styled, { createGlobalStyle } from 'styled-components';
 
@@ -68,7 +69,7 @@ type BasicSectionProps = {
 // basic container----------------------------------
 export const BasicSection = styled.section<BasicSectionProps>`
   width: 100%;
-  min-height: 100vh;
+  min-width: 320px;
   box-sizing: border-box;
   background-color: ${(props) => props.backgroundColor};
   margin: ${(props) => (props.margin ? props.margin : null)};

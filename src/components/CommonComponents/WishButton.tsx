@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { WishButtonLayout, WishButtonLayoutProps } from './style';
 import arrow from '../../images/arrow.png';
+import { Link } from 'gatsby';
 
 type WishButtonProps = WishButtonLayoutProps & {
   buttonText: string;
@@ -19,8 +20,19 @@ const WishButton: FC<WishButtonProps> = ({
 }) => {
   return (
     <WishButtonLayout width={width} height={height}>
-      {buttonText}
-      <img className="arrow" src={arrow} />
+      <Link
+        to="/comingSoonPage"
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: 'black',
+        }}
+      >
+        {buttonText}
+        <img className="arrow" src={arrow} />
+      </Link>
     </WishButtonLayout>
   );
 };
