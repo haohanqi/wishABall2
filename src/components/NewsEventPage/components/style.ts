@@ -107,7 +107,6 @@ export const NewsListItem = styled.div`
     font-size: 0.85rem;
     color: #8c8c8c;
     margin-right: 10px;
-    flex-shrink: 0;
   }
 
   .readMoreButton {
@@ -121,6 +120,12 @@ export const NewsListItem = styled.div`
     color: white;
     font-size: 0.85rem;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 669px) and (min-width: 481px) {
+    .blogDes {
+      max-width: 100%;
+    }
   }
 
   @media only screen and (max-width: 480px) {

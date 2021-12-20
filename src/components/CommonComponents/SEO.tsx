@@ -30,7 +30,7 @@ const SEO: FC<SEOProps> = ({
     }
   `);
   const metaDescription = description || data.site.siteMetadata.description;
-  const metaUrl = `${data.site.siteMetadata.siteUrl}${pathname}`;
+  const metaUrl = `${data.site.siteMetadata.siteUrl}/${pathname}`;
   return (
     <Helmet
       htmlAttributes={{

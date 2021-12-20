@@ -72,28 +72,26 @@ const NewsSection = () => {
         <Col xl={0} lg={0} md={22} sm={22} xs={22}>
           {event
             ? event.allMarkdownRemark.edges.map(({ node }) => {
-                if (node.frontmatter.important) {
-                  return (
-                    <NewsPanelWrapper
-                      {...node}
-                      key={node.frontmatter.path}
-                      backgroundImage={node.frontmatter.backgroundImage}
-                    >
-                      <Link to={node.frontmatter.path}>
-                        <div className="centerWrapper">
-                          <div className="infoWrapper">
-                            <h3 className="panelTitle">
-                              {node.frontmatter.title}
-                            </h3>
-                            <div className="panelDate">
-                              {node.frontmatter.date}
-                            </div>
+                return (
+                  <NewsPanelWrapper
+                    {...node}
+                    key={node.frontmatter.path}
+                    backgroundImage={node.frontmatter.backgroundImage}
+                  >
+                    <Link to={node.frontmatter.path}>
+                      <div className="centerWrapper">
+                        <div className="infoWrapper">
+                          <h3 className="panelTitle">
+                            {node.frontmatter.title}
+                          </h3>
+                          <div className="panelDate">
+                            {node.frontmatter.date}
                           </div>
                         </div>
-                      </Link>
-                    </NewsPanelWrapper>
-                  );
-                }
+                      </div>
+                    </Link>
+                  </NewsPanelWrapper>
+                );
               })
             : 'No Content Available now'}
         </Col>

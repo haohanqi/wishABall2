@@ -10,7 +10,10 @@ import SEO from 'components/CommonComponents/SEO';
 const ContactUsPage = () => {
   return (
     <ContactUsPageContainer>
-      <SEO keywords={['OSE Contact Page', 'OSE Contact Us']} />
+      <SEO
+        pathname="contactUsPage"
+        keywords={['OSE Contact Page', 'OSE Contact Us']}
+      />
       <ContactUsSection>
         <StaticImage
           src="../../images/main.jpg"

@@ -8,7 +8,11 @@ const index = () => {
   return (
     <>
       <SEO
+        pathname="newsPages"
         keywords={[
+          'OSE',
+          'OSE newsPage',
+          'OSE news and events',
           'OSE News And Events Page',
           'Overseas Sports And Education News',
           'Overseas Sports And Education Events',
