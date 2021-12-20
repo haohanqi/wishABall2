@@ -2,7 +2,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { NewsBanner, NewsPageContainer, NewTitle, NewDate } from './style';
-import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '@/components/CommonComponents/SEO';
 
 const NewsPage = ({ data }) => {
@@ -20,16 +19,6 @@ const NewsPage = ({ data }) => {
         ]}
       />
       <NewsBanner>
-        <div className="companyLogo">
-          <StaticImage
-            src={'../images/logo.png'}
-            alt="OSE Logo"
-            width={70}
-            height={55}
-            layout="fixed"
-            loading="eager"
-          />
-        </div>
         <div className="logoTitle">Wish A Ball</div>
         <div className="titleContainer">
           <NewTitle>{title}</NewTitle>

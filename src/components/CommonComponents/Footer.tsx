@@ -65,7 +65,6 @@ const Footer: FC = () => {
           <FooterInfo className="footerInfo">
             <h3 className="footerTitle">Contact Us</h3>
             <h4 className="footerText">info@osecanada.com</h4>
-            <h4 className="footerText">6478295577</h4>
           </FooterInfo>
         </div>
 

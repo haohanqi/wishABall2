@@ -105,7 +105,9 @@ const Header: FC = () => {
               <Link to="/contactUsPage">
                 <div className="navText">CONTACT US</div>
               </Link>
-              <div className="navText">COMING SOON</div>
+              <Link to="/comingSoonPage">
+                <div className="navText">COMING SOON</div>
+              </Link>
               {/* <LanguageTransButton mobileHidden={true} /> */}
             </NavBar>
           </Col>

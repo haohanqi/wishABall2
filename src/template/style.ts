@@ -118,7 +118,6 @@ export const EventField = styled.div`
   .title {
     font-size: 2rem;
     font-weight: 600;
-    margin-top: 10px;
     margin-right: 20px;
     margin-bottom: 10px;
   }

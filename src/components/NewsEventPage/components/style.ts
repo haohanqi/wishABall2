@@ -80,19 +80,15 @@ export const NewsListItem = styled.div`
   padding: 15px;
 
   .blogWrapper {
-    width: 50%;
-    min-width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 25px;
-    flex-shrink: 0;
+    flex-wrap: wrap;
   }
 
   .blogInfo {
-    flex: 1;
     display: flex;
-    min-width: 160px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -102,13 +98,12 @@ export const NewsListItem = styled.div`
   .blogTitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    min-width: 300px;
+    min-width: 330px;
     flex-shrink: 0;
   }
 
   .blogDes {
-    flex: 1;
-    min-width: 170px;
+    max-width: 230px;
     font-size: 0.85rem;
     color: #8c8c8c;
     margin-right: 10px;
@@ -169,12 +164,7 @@ export const NewsListItem = styled.div`
 export const EventListItemWrapper = styled(NewsListItemWrapper)``;
 
 export const EventListItem = styled(NewsListItem)`
-  .blogInfo {
-    flex: 4;
-  }
-
   .dateWrapper {
-    flex: 1;
     min-height: 80px;
     display: flex;
     flex-direction: column;

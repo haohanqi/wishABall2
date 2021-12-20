@@ -12,9 +12,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 
 const NewsSection = () => {
   const event = useStaticQuery(graphql`
-    query EventList {
+    query BlogList {
       allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/event/" } }
+        filter: { fileAbsolutePath: { regex: "/blog/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
@@ -23,8 +23,6 @@ const NewsSection = () => {
               title
               path
               date(formatString: "MMMM DD, YYYY")
-              backgroundImage
-              important
             }
           }
         }
@@ -45,28 +43,26 @@ const NewsSection = () => {
           <Carousel autoplay dotPosition="right" adaptiveHeight>
             {event
               ? event.allMarkdownRemark.edges.map(({ node }) => {
-                  if (node.frontmatter.important) {
-                    return (
-                      <NewsPanelWrapper
-                        {...node}
-                        key={node.frontmatter.path}
-                        backgroundImage={node.frontmatter.backgroundImage}
-                      >
-                        <Link to={node.frontmatter.path}>
-                          <div className="centerWrapper">
-                            <div className="infoWrapper">
-                              <h3 className="panelTitle">
-                                {node.frontmatter.title}
-                              </h3>
-                              <div className="panelDate">
-                                {node.frontmatter.date}
-                              </div>
+                  return (
+                    <NewsPanelWrapper
+                      {...node}
+                      key={node.frontmatter.path}
+                      backgroundImage={node.frontmatter.backgroundImage}
+                    >
+                      <Link to={node.frontmatter.path}>
+                        <div className="centerWrapper">
+                          <div className="infoWrapper">
+                            <h3 className="panelTitle">
+                              {node.frontmatter.title}
+                            </h3>
+                            <div className="panelDate">
+                              {node.frontmatter.date}
                             </div>
                           </div>
-                        </Link>
-                      </NewsPanelWrapper>
-                    );
-                  }
+                        </div>
+                      </Link>
+                    </NewsPanelWrapper>
+                  );
                 })
               : 'No Content Available now'}
           </Carousel>

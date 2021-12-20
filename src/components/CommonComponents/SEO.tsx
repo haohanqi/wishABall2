@@ -59,14 +59,6 @@ const SEO: FC<SEOProps> = ({
           property: `og:type`,
           content: `website`,
         },
-        // {
-        //   name: `twitter:title`,
-        //   content: title,
-        // },
-        // {
-        //   name: `twitter:description`,
-        //   content: metaDescription,
-        // },
       ].concat(
         keywords.length > 0
           ? {
