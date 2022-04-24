@@ -9,6 +9,7 @@ const NewsPage = ({ data }) => {
   return (
     <>
       <SEO
+        description="Overseas Sports And Education News"
         title={title}
         keywords={[
           `${title}`,

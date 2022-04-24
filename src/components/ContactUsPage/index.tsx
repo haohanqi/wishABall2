@@ -13,6 +13,7 @@ const ContactUsPage = () => {
       <SEO
         pathname="contactUsPage"
         keywords={['OSE Contact Page', 'OSE Contact Us']}
+        description="contact information"
       />
       <ContactUsSection>
         <StaticImage

@@ -99,7 +99,7 @@ const NewsSection = () => {
 
       <Row justify="center" align="middle">
         <SeeMoreButton>
-          <Link to="/newsPage">See More</Link>
+          <Link to="/newsPage">Learn More</Link>
         </SeeMoreButton>
       </Row>
     </NewSectionWrapper>

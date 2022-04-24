@@ -31,7 +31,7 @@ const WishButton: FC<WishButtonProps> = ({
         }}
       >
         {buttonText}
-        <img className="arrow" src={arrow} />
+        <img className="arrow" src={arrow} alt="right arrow" />
       </Link>
     </WishButtonLayout>
   );

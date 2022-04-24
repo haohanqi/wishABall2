@@ -16,7 +16,7 @@ const SocialMediaGroup: FC<SocialMediaGroupProps> = ({
   return (
     <SocialMediaGroupWrapper width={width} height={height}>
       {imgs.map((src) => (
-        <SocialMediaItem key={src} src={src} />
+        <SocialMediaItem key={src} src={src} alt="soical media" />
       ))}
     </SocialMediaGroupWrapper>
   );

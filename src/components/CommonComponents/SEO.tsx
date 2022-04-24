@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 type SEOProps = {
-  description?: string;
+  description: string;
   lang?: string;
   keywords: string[];
   title?: string;
@@ -67,7 +67,16 @@ const SEO: FC<SEOProps> = ({
             }
           : [],
       )}
-    ></Helmet>
+    >
+      <html lang={lang ? lang : 'en'} />
+      <title itemProp="name" lang={lang ? lang : 'en'}>
+        {`OSE (over sea education and sports) ${title}`}
+      </title>
+      <meta name="description" content={description} />
+      {metaUrl && <meta property="og:url" content={metaUrl} />}
+      {title && <meta property="og:title" content={title} />}
+      {description && <meta property="og:description" content={description} />}
+    </Helmet>
   );
 };
 

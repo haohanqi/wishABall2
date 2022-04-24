@@ -10,6 +10,7 @@ const EventPage = ({ data }) => {
   return (
     <>
       <SEO
+        description="Overseas Sports And Education Events"
         title={title}
         keywords={[
           `${title}`,

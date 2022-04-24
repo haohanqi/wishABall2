@@ -9,6 +9,7 @@ const MainPage = () => {
   return (
     <>
       <SEO
+        description="OSE Overseas Sports And Education"
         keywords={[
           'OSE Main Page',
           'Overseas Sports And Education',
