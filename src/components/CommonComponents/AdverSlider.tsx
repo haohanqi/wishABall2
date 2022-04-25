@@ -1,5 +1,6 @@
-import React, { FC, useEffect, useState, useRef } from 'react';
-import { SliderContainer, SliderItem } from './style';
+/* eslint-disable react/no-array-index-key */
+import React, { FC, useEffect, useState, useRef } from "react";
+import { SliderContainer, SliderItem } from "./style";
 
 export type Sliders = {
   width?: number;
@@ -8,9 +9,9 @@ export type Sliders = {
 };
 
 const sliderData = [
-  'Nike Discount on OSE Today',
-  'LiNing BasketShoes in OSE',
-  'LiNing Baskeoes in OSE',
+  "Nike Discount on OSE Today",
+  "LiNing BasketShoes in OSE",
+  "LiNing Baskeoes in OSE",
 ];
 const AdverSlider: FC = () => {
   const [state, setState] = useState({
@@ -21,6 +22,22 @@ const AdverSlider: FC = () => {
   const { activeIndex, time } = state;
 
   const autoPlayRef = useRef(null);
+
+  const nextSlide = () => {
+    if (activeIndex === sliderData.length - 1) {
+      return setState({
+        ...state,
+        activeIndex: 0,
+      });
+    }
+
+    setState({
+      ...state,
+      activeIndex: activeIndex + 1,
+    });
+
+    return null;
+  };
 
   useEffect(() => {
     autoPlayRef.current = nextSlide;
@@ -35,29 +52,15 @@ const AdverSlider: FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const nextSlide = () => {
-    if (activeIndex === sliderData.length - 1) {
-      return setState({
-        ...state,
-        activeIndex: 0,
-      });
-    }
-
-    setState({
-      ...state,
-      activeIndex: activeIndex + 1,
-    });
-  };
-
   return (
     <SliderContainer
       width={sliderData.length}
       activeIndex={activeIndex}
       time={time}
     >
-      {sliderData.map((item, index) => {
-        return <SliderItem key={index}>{item}</SliderItem>;
-      })}
+      {sliderData.map((item, index) => (
+        <SliderItem key={index}>{item}</SliderItem>
+      ))}
     </SliderContainer>
   );
 };

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { BasicColor, SmallTitle, SmallText, MediumTitle } from '../BasicStyle';
-import { SocialMediaGroupProps } from '../CommonComponents/SocialMediaGroup';
-import { Sliders } from './AdverSlider';
+import styled from "styled-components";
+import { BasicColor, SmallTitle, SmallText, MediumTitle } from "../BasicStyle";
+import { SocialMediaGroupProps } from "./SocialMediaGroup";
+import { Sliders } from "./AdverSlider";
 // types
 type HeaderProps = {
   backgroundColor: BasicColor;
@@ -64,36 +64,36 @@ export const HeaderWrapper = styled.section<HeaderProps>`
 export const LogoWrapper = styled.div<LogoProps>`
   box-sizing: border-box;
   width: 100%;
-  height: ${(props) => props.height + 'px'};
+  height: ${(props) => `${props.height}px`};
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   .divider {
-    width: ${(props) => props.dividerWidth + 'px'};
-    height: ${(props) => props.dividerHeight + 'px'};
+    width: ${(props) => `${props.dividerWidth}px`};
+    height: ${(props) => `${props.dividerHeight}px`};
     background-color: ${BasicColor.highlightTextColor};
-    margin: ${(props) => props.space + 'px'};
+    margin: ${(props) => `${props.space}px`};
   }
   .logoText {
-    font-size: ${(props) => props.logoTextSize + 'rem'};
+    font-size: ${(props) => `${props.logoTextSize}rem`};
     font-weight: 500;
     color: ${BasicColor.highlightTextColor};
   }
 
   @media only screen and (max-width: 480px) {
     .logoImage {
-      width: ${(props) => props.imageWidth + 'px'};
-      height: ${(props) => props.imageHeight + 'px'};
+      width: ${(props) => `${props.imageWidth}px`};
+      height: ${(props) => `${props.imageHeight}px`};
     }
     .divider {
-      width: ${(props) => props.dividerWidth + 'px'};
-      height: ${(props) => props.dividerHeight + 'px'};
-      margin: ${(props) => props.space + 'px'};
+      width: ${(props) => `${props.dividerWidth}px`};
+      height: ${(props) => `${props.dividerHeight}px`};
+      margin: ${(props) => `${props.space}px`};
     }
     .logoText {
-      font-size: ${(props) => props.logoTextSize + 'rem'};
+      font-size: ${(props) => `${props.logoTextSize}rem`};
     }
   }
 `;
@@ -162,7 +162,7 @@ export const LanguageTransButton = styled.div<languageTransButtonProps>`
   }
   transition: all 0.3s linear;
   @media only screen and (max-width: 1000px) {
-    display: ${(props) => (props.mobileHidden ? 'none' : 'flex')};
+    display: ${(props) => (props.mobileHidden ? "none" : "flex")};
   }
 `;
 
@@ -235,13 +235,13 @@ export const FooterWrapper = styled.footer`
   .footerText {
     ${SmallText};
     margin-bottom: 2px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: ${BasicColor.secondaryColor};
   }
 
   .copyRight {
     ${SmallText};
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     color: ${BasicColor.secondaryColor};
     text-align: center;
     color: #c8c8c8;
@@ -276,7 +276,7 @@ export const FooterLogoSection = styled.div`
   align-items: center;
   .logoSlogan {
     ${SmallText};
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
     color: ${BasicColor.secondaryColor};
     text-align: center;
@@ -356,15 +356,15 @@ export const FooterWishWrapper = styled.div`
 
 // social media groups
 export const SocialMediaGroupWrapper = styled.div<SocialMediaGroupProps>`
-  width: ${(props) => (props.width ? props.width : '90%')};
-  height: ${(props) => (props.height ? props.height : '60px')};
+  width: ${(props) => (props.width ? props.width : "90%")};
+  height: ${(props) => (props.height ? props.height : "60px")};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   @media only screen and (max-width: 480px) {
-    display: ${(props) => (props.mobileHidden ? 'none' : 'flex')};
+    display: ${(props) => (props.mobileHidden ? "none" : "flex")};
   }
 `;
 export const SocialMediaItem = styled.img`
@@ -384,8 +384,8 @@ export type WishButtonLayoutProps = {
   width?: string;
 };
 export const WishButtonLayout = styled.div<WishButtonLayoutProps>`
-  width: ${(props) => (props.width ? props.width : '85%')};
-  height: ${(props) => (props.height ? props.height : '60px')};
+  width: ${(props) => (props.width ? props.width : "85%")};
+  height: ${(props) => (props.height ? props.height : "60px")};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -421,7 +421,7 @@ export const WishButtonLayout = styled.div<WishButtonLayoutProps>`
 `;
 
 export const SliderContainer = styled.div<Sliders>`
-  width: ${(props) => (props.width ? props.width * 100 + 'vw' : 100 + '%')};
+  width: ${(props) => (props.width ? `${props.width * 100}vw` : `${100}%`)};
   height: 40px;
   display: flex;
   justify-content: center;

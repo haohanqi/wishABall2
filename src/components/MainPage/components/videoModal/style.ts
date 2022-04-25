@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const VideoModalWrapper = styled.div`
   width: 100%;
@@ -15,7 +15,7 @@ export const VideoModalWrapper = styled.div`
   align-items: center;
   z-index: 200;
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;

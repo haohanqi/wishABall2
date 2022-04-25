@@ -1,19 +1,18 @@
-import React, { FC } from 'react';
-import { Row, Col } from 'antd';
-import Logo from '../../CommonComponents/Logo';
+import React, { FC } from "react";
+import { Row, Col } from "antd";
+import { BiSearchAlt2 } from "react-icons/bi";
+import { RiUserSearchFill, RiTeamFill } from "react-icons/ri";
+import { FaHandshake } from "react-icons/fa";
+import Logo from "../../CommonComponents/Logo";
 import {
   AboutUsWrapper,
   AboutUsTitleWrapper,
   AboutUsContentWrapper,
   ImageItem,
-} from './style';
-import { BasicColor } from '../../BasicStyle';
-import entrySection from '../../../images/entrySection.jpg';
-import readSection from '../../../images/read.jpg';
-
-import { BiSearchAlt2 } from 'react-icons/bi';
-import { RiUserSearchFill, RiTeamFill } from 'react-icons/ri';
-import { FaHandshake } from 'react-icons/fa';
+} from "./style";
+import { BasicColor } from "../../BasicStyle";
+import entrySection from "../../../images/entrySection.jpg";
+import readSection from "../../../images/read.jpg";
 
 const AboutUsSection = () => {
   type WorkWithUsItemProps = {
@@ -29,17 +28,15 @@ const AboutUsSection = () => {
     title: string;
     des: string;
     children: React.ReactNode;
-  }) => {
-    return (
-      <div className="workWithUsItem">
-        <div className="icon">{children}</div>
-        <div className="contentWrapper">
-          <div className="itemTitle">{title}</div>
-          <div className="itemDes">{des}</div>
-        </div>
+  }) => (
+    <div className="workWithUsItem">
+      <div className="icon">{children}</div>
+      <div className="contentWrapper">
+        <div className="itemTitle">{title}</div>
+        <div className="itemDes">{des}</div>
       </div>
-    );
-  };
+    </div>
+  );
 
   return (
     <AboutUsWrapper backgroundColor={BasicColor.primaryColor}>
@@ -61,7 +58,7 @@ const AboutUsSection = () => {
             </div>
 
             <div className="verticalWrapper">
-              <div className="verticalDivider"></div>
+              <div className="verticalDivider" />
               <div className="verticalText">OVERSEA SPORTS & EDUCATION</div>
             </div>
           </AboutUsTitleWrapper>
@@ -82,14 +79,14 @@ const AboutUsSection = () => {
 
             <div className="aboutUsIntroImageWrapper">
               <ImageItem
-                startRow={'1'}
-                endRow={'2'}
-                startCol={'1'}
-                endCol={'2'}
-                mobileStartCol={'1'}
-                mobileEndCol={'3'}
-                mobileStartRow={'1'}
-                mobileEndRow={'3'}
+                startRow="1"
+                endRow="2"
+                startCol="1"
+                endCol="2"
+                mobileStartCol="1"
+                mobileEndCol="3"
+                mobileStartRow="1"
+                mobileEndRow="3"
                 backgroundImage={entrySection}
               >
                 <div className="imageContentWrapper">
@@ -98,14 +95,14 @@ const AboutUsSection = () => {
                 </div>
               </ImageItem>
               <ImageItem
-                startRow={'2'}
-                endRow={'3'}
-                startCol={'1'}
-                endCol={'2'}
-                mobileStartCol={'3'}
-                mobileEndCol={'5'}
-                mobileStartRow={'1'}
-                mobileEndRow={'3'}
+                startRow="2"
+                endRow="3"
+                startCol="1"
+                endCol="2"
+                mobileStartCol="3"
+                mobileEndCol="5"
+                mobileStartRow="1"
+                mobileEndRow="3"
                 backgroundImage={readSection}
               >
                 <div className="imageContentWrapper">
@@ -133,7 +130,7 @@ const AboutUsSection = () => {
                     title="Job Opportunity"
                     des="This is a short description"
                   >
-                    {<BiSearchAlt2 />}
+                    <BiSearchAlt2 />
                   </WorkWithUsItem>
                 </Col>
                 <Col xl={5} lg={5} md={12} sm={12} xs={11}>
@@ -141,7 +138,7 @@ const AboutUsSection = () => {
                     title="Partnership"
                     des="This is a short description"
                   >
-                    {<FaHandshake />}
+                    <FaHandshake />
                   </WorkWithUsItem>
                 </Col>
                 <Col xl={5} lg={5} md={12} sm={12} xs={11}>
@@ -149,7 +146,7 @@ const AboutUsSection = () => {
                     title="Ad & Sponsorship"
                     des="This is a short description"
                   >
-                    {<RiTeamFill />}
+                    <RiTeamFill />
                   </WorkWithUsItem>
                 </Col>
                 <Col xl={5} lg={5} md={12} sm={12} xs={11}>
@@ -157,7 +154,7 @@ const AboutUsSection = () => {
                     title="Contact Us"
                     des="This is a short description"
                   >
-                    {<RiUserSearchFill />}
+                    <RiUserSearchFill />
                   </WorkWithUsItem>
                 </Col>
               </Row>

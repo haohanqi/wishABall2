@@ -1,17 +1,63 @@
-import React, { FC, useEffect } from 'react';
-import { Row, Col } from 'antd';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose } from 'react-icons/ai';
-import Logo from './Logo';
-import SocialMediaGroup from './SocialMediaGroup';
-import { HeaderWrapper, NavBar, MobileNavMenuWrapper } from './style';
-import { BasicColor } from '../BasicStyle';
-import { Link } from 'gatsby';
-import insIcon from '../../images/ins.png';
-import wechatIcon from '../../images/wechat.png';
-import facebookIcon from '../../images/facebook.png';
+import React, { FC, useEffect } from "react";
+import { Row, Col } from "antd";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "gatsby";
+import Logo from "./Logo";
+import SocialMediaGroup from "./SocialMediaGroup";
+import { HeaderWrapper, NavBar, MobileNavMenuWrapper } from "./style";
+import { BasicColor } from "../BasicStyle";
+import insIcon from "../../images/ins.png";
+import wechatIcon from "../../images/wechat.png";
+import facebookIcon from "../../images/facebook.png";
+
+const MobileNavMenu = () => {
+  const closeMobileNavMenu = () => {
+    const t1 = gsap.timeline();
+    t1.to(".MobileNavMenuWrapper", 0.6, {
+      x: "220px",
+    })
+      .to(".MobileNavMenuWrapper", {
+        display: "none",
+      })
+      .to("body", {
+        overflowY: "scroll",
+      });
+  };
+
+  useEffect(() => {
+    gsap.timeline().to("body", {
+      overflowY: "scroll",
+    });
+  }, []);
+
+  return (
+    <MobileNavMenuWrapper className="MobileNavMenuWrapper">
+      <AiOutlineClose
+        className="mobileCloseButton"
+        onClick={closeMobileNavMenu}
+      />
+      <div className="mobileNavBar">
+        <Link to="/">
+          <div className="mobileNavItem">ABOUT US</div>
+        </Link>
+        <Link to="/newsPage">
+          <div className="mobileNavItem">NEWS</div>
+        </Link>
+        <Link to="/contactUsPage">
+          <div className="mobileNavItem">CONTACT US</div>
+        </Link>
+        <div className="mobileNavItem">MORE</div>
+        <SocialMediaGroup
+          imgs={[insIcon, wechatIcon, facebookIcon]}
+          width="80%"
+        />
+      </div>
+    </MobileNavMenuWrapper>
+  );
+};
 
 const Header: FC = () => {
   useEffect(() => {
@@ -20,14 +66,14 @@ const Header: FC = () => {
 
   const showMobileNavMenu = () => {
     const t1 = gsap.timeline();
-    t1.to('.MobileNavMenuWrapper', {
-      display: 'block',
+    t1.to(".MobileNavMenuWrapper", {
+      display: "block",
     })
-      .to('.MobileNavMenuWrapper', 0.6, {
-        x: '0px',
+      .to(".MobileNavMenuWrapper", 0.6, {
+        x: "0px",
       })
-      .to('body', {
-        overflowY: 'hidden',
+      .to("body", {
+        overflowY: "hidden",
       });
   };
 
@@ -55,11 +101,11 @@ const Header: FC = () => {
             <div
               className="hbar"
               style={{
-                width: '100%',
-                height: '20px',
-                backgroundColor: '#F1F1F1',
+                width: "100%",
+                height: "20px",
+                backgroundColor: "#F1F1F1",
               }}
-            ></div>
+            />
           </Col>
 
           {/* mobile version */}
@@ -117,52 +163,6 @@ const Header: FC = () => {
 
       <MobileNavMenu />
     </>
-  );
-};
-
-const MobileNavMenu = () => {
-  const closeMobileNavMenu = () => {
-    const t1 = gsap.timeline();
-    t1.to('.MobileNavMenuWrapper', 0.6, {
-      x: '220px',
-    })
-      .to('.MobileNavMenuWrapper', {
-        display: 'none',
-      })
-      .to('body', {
-        overflowY: 'scroll',
-      });
-  };
-
-  useEffect(() => {
-    gsap.timeline().to('body', {
-      overflowY: 'scroll',
-    });
-  }, []);
-
-  return (
-    <MobileNavMenuWrapper className="MobileNavMenuWrapper">
-      <AiOutlineClose
-        className="mobileCloseButton"
-        onClick={closeMobileNavMenu}
-      />
-      <div className="mobileNavBar">
-        <Link to="/">
-          <div className="mobileNavItem">ABOUT US</div>
-        </Link>
-        <Link to="/newsPage">
-          <div className="mobileNavItem">NEWS</div>
-        </Link>
-        <Link to="/contactUsPage">
-          <div className="mobileNavItem">CONTACT US</div>
-        </Link>
-        <div className="mobileNavItem">MORE</div>
-        <SocialMediaGroup
-          imgs={[insIcon, wechatIcon, facebookIcon]}
-          width="80%"
-        />
-      </div>
-    </MobileNavMenuWrapper>
   );
 };
 

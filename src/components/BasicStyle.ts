@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 // global style definitions
 export const GlobalStyle = createGlobalStyle`
@@ -342,10 +342,10 @@ template {
 
 // basic style--------------------------------------
 export enum BasicColor {
-  primaryColor = '#FFFFFF',
-  secondaryColor = '#747474',
-  thirdColor = '#FAFAFA',
-  highlightTextColor = '#000000',
+  primaryColor = `#FFFFFF`,
+  secondaryColor = `#747474`,
+  thirdColor = `#FAFAFA`,
+  highlightTextColor = `#000000`,
 }
 
 export const LargeTitle = `
@@ -379,7 +379,7 @@ export const BasicSection = styled.section<BasicSectionProps>`
   box-sizing: border-box;
   background-color: ${(props) => props.backgroundColor};
   margin: ${(props) => (props.margin ? props.margin : null)};
-  padding: ${(props) => (props.padding ? props.padding : '2.5%')};
+  padding: ${(props) => (props.padding ? props.padding : "2.5%")};
   background-image: url(${(props) => (props.imageUrl ? props.imageUrl : null)});
   background-repeat: no-repeat;
   background-size: cover;

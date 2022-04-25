@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { graphql } from 'gatsby';
-import { NewsBanner, EventPageContainer, NewTitle, EventField } from './style';
-import SEO from '@/components/CommonComponents/SEO';
+import React from "react";
+import { graphql } from "gatsby";
+import SEO from "@/components/CommonComponents/SEO";
+import { NewsBanner, EventPageContainer, NewTitle, EventField } from "./style";
 
 const EventPage = ({ data }) => {
   const { title, date, location } = data.markdownRemark.frontmatter;
@@ -16,9 +16,9 @@ const EventPage = ({ data }) => {
           `${title}`,
           `${location}`,
           `${date}`,
-          'OSE Events Page',
-          'Overseas Sports And Education Events',
-          'OSE Event',
+          "OSE Events Page",
+          "Overseas Sports And Education Events",
+          "OSE Event",
         ]}
       />
       <NewsBanner>
@@ -37,7 +37,7 @@ const EventPage = ({ data }) => {
         </div>
 
         <div
-          style={{ width: '100%', maxWidth: '500px' }}
+          style={{ width: "100%", maxWidth: "500px" }}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </EventPageContainer>

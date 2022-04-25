@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import React, { FC } from 'react';
-import { EventListItemWrapper, EventListItem } from './style';
-import { Link } from 'gatsby';
+import React, { FC } from "react";
+import { Link } from "gatsby";
+import { EventListItemWrapper, EventListItem } from "./style";
 
 interface event {
   excerpt: string;
@@ -15,7 +15,7 @@ interface event {
 const EventItem: FC<event> = ({ frontmatter }) => {
   const dateFormat = (date: string) => {
     const newDate = new Date(date);
-    const month = newDate.toLocaleDateString('default', { month: 'short' });
+    const month = newDate.toLocaleDateString("default", { month: "short" });
     const day = newDate.getDate();
 
     return {

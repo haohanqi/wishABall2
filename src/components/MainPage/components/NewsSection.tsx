@@ -1,14 +1,14 @@
-import React from 'react';
-import AdverSlider from '../../CommonComponents/AdverSlider';
+import React from "react";
+import { Row, Col, Carousel } from "antd";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import AdverSlider from "../../CommonComponents/AdverSlider";
 import {
   NewSectionWrapper,
   NewsSectionTitle,
   NewsPanelWrapper,
   SeeMoreButton,
-} from './style';
-import { BasicColor } from '../../BasicStyle';
-import { Row, Col, Carousel } from 'antd';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+} from "./style";
+import { BasicColor } from "../../BasicStyle";
 
 const NewsSection = () => {
   const event = useStaticQuery(graphql`
@@ -42,37 +42,7 @@ const NewsSection = () => {
         <Col xl={18} lg={18} md={0} sm={0} xs={0}>
           <Carousel autoplay dotPosition="right" adaptiveHeight>
             {event
-              ? event.allMarkdownRemark.edges.map(({ node }) => {
-                  return (
-                    <NewsPanelWrapper
-                      {...node}
-                      key={node.frontmatter.path}
-                      backgroundImage={node.frontmatter.backgroundImage}
-                    >
-                      <Link to={node.frontmatter.path}>
-                        <div className="centerWrapper">
-                          <div className="infoWrapper">
-                            <h3 className="panelTitle">
-                              {node.frontmatter.title}
-                            </h3>
-                            <div className="panelDate">
-                              {node.frontmatter.date}
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    </NewsPanelWrapper>
-                  );
-                })
-              : 'No Content Available now'}
-          </Carousel>
-        </Col>
-
-        {/* Mobile version */}
-        <Col xl={0} lg={0} md={22} sm={22} xs={22}>
-          {event
-            ? event.allMarkdownRemark.edges.map(({ node }) => {
-                return (
+              ? event.allMarkdownRemark.edges.map(({ node }) => (
                   <NewsPanelWrapper
                     {...node}
                     key={node.frontmatter.path}
@@ -91,9 +61,31 @@ const NewsSection = () => {
                       </div>
                     </Link>
                   </NewsPanelWrapper>
-                );
-              })
-            : 'No Content Available now'}
+                ))
+              : `No Content Available now`}
+          </Carousel>
+        </Col>
+
+        {/* Mobile version */}
+        <Col xl={0} lg={0} md={22} sm={22} xs={22}>
+          {event
+            ? event.allMarkdownRemark.edges.map(({ node }) => (
+                <NewsPanelWrapper
+                  {...node}
+                  key={node.frontmatter.path}
+                  backgroundImage={node.frontmatter.backgroundImage}
+                >
+                  <Link to={node.frontmatter.path}>
+                    <div className="centerWrapper">
+                      <div className="infoWrapper">
+                        <h3 className="panelTitle">{node.frontmatter.title}</h3>
+                        <div className="panelDate">{node.frontmatter.date}</div>
+                      </div>
+                    </div>
+                  </Link>
+                </NewsPanelWrapper>
+              ))
+            : `No Content Available now`}
         </Col>
       </Row>
 

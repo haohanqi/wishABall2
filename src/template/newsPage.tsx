@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { graphql } from 'gatsby';
-import { NewsBanner, NewsPageContainer, NewTitle, NewDate } from './style';
-import SEO from '@/components/CommonComponents/SEO';
+import React from "react";
+import { graphql } from "gatsby";
+import SEO from "@/components/CommonComponents/SEO";
+import { NewsBanner, NewsPageContainer, NewTitle, NewDate } from "./style";
 
 const NewsPage = ({ data }) => {
   const { title, date } = data.markdownRemark.frontmatter;
@@ -14,9 +14,9 @@ const NewsPage = ({ data }) => {
         keywords={[
           `${title}`,
           `${date}`,
-          'OSE News Page',
-          'Overseas Sports And Education News',
-          'OSE News',
+          "OSE News Page",
+          "Overseas Sports And Education News",
+          "OSE News",
         ]}
       />
       <NewsBanner>

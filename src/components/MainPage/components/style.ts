@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+/* eslint-disable import/no-unresolved */
+import styled from "styled-components";
+import wish from "images/background1.png";
+import wish2 from "images/background2.jpg";
+import wish3 from "images/background3.jpg";
 import {
   BasicSection,
   LargeTitle,
@@ -6,10 +10,7 @@ import {
   SmallTitle,
   SmallText,
   BasicColor,
-} from '../../BasicStyle';
-import wish from 'images/background1.png';
-import wish2 from 'images/background2.jpg';
-import wish3 from 'images/background3.jpg';
+} from "../../BasicStyle";
 
 // Entry Section style
 export const EntrySectionWrapper = styled(BasicSection)`
@@ -54,7 +55,7 @@ export const CompanyInfo = styled.div`
   }
 `;
 
-//News Section styled
+// News Section styled
 export const NewSectionWrapper = styled(BasicSection)`
   position: relative;
 `;
@@ -87,7 +88,7 @@ export const NewsPanelWrapper = styled.div<NewsPanel>`
   &:after {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     top: 0;
@@ -127,7 +128,7 @@ export const NewsPanelWrapper = styled.div<NewsPanel>`
   }
   .panelDate {
     ${SmallText};
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -238,15 +239,15 @@ type PromoBoxProps = {
 };
 
 export const PromoBox = styled.div<PromoBoxProps>`
-  width: ${(props) => (props.width ? props.width : '100%')};
+  width: ${(props) => (props.width ? props.width : "100%")};
   height: ${(props) => props.height};
   box-sizing: border-box;
   position: relative;
-  ${(props) => (props.small ? 'text-align:center' : 'text-align:left')};
+  ${(props) => (props.small ? "text-align:center" : "text-align:left")};
   padding: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) => (props.small ? 'center' : 'flex-end')};
+  justify-content: ${(props) => (props.small ? "center" : "flex-end")};
   color: white;
   cursor: pointer;
   overflow: hidden;
@@ -254,7 +255,7 @@ export const PromoBox = styled.div<PromoBoxProps>`
 
   &:after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     bottom: 0;
@@ -272,14 +273,14 @@ export const PromoBox = styled.div<PromoBoxProps>`
     width: 100%;
     ${(props) => (props.small ? `${SmallText}` : `${SmallTitle}`)};
     font-weight: 600;
-    ${(props) => (props.small ? 'margin-bottom:15px' : 'margin-bottom:20px')};
+    ${(props) => (props.small ? "margin-bottom:15px" : "margin-bottom:20px")};
     transition: all 0.4s linear;
     z-index: 1;
   }
 
   .promoDes {
     width: 100%;
-    ${(props) => (props.small ? 'font-size:0.65rem' : `${SmallText}`)};
+    ${(props) => (props.small ? "font-size:0.65rem" : `${SmallText}`)};
     transition: all 0.4s linear;
     z-index: 1;
   }
@@ -341,7 +342,7 @@ export const AboutUsTitleWrapper = styled.div`
   .logoSlogan {
     text-align: center;
     font-size: 0.6rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
     color: ${BasicColor.secondaryColor};
     text-align: center;
@@ -549,7 +550,7 @@ export const ImageItem = styled.div<ImageItemProps>`
     left: 0;
     right: 0;
     display: block;
-    content: '';
+    content: "";
     background-image: url(${(props) => props.backgroundImage});
     background-repeat: no-repeat;
     background-size: cover;

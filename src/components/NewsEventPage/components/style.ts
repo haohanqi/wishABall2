@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const AdverSectionWrapper = styled.section`
   display: flex;
@@ -35,7 +35,7 @@ export const MoreNewsSectionWrapper = styled.section`
     font-weight: 700;
     &:after {
       display: block;
-      content: '';
+      content: "";
       width: 100%;
       height: 2px;
       background-color: #c8c8c8;
@@ -60,7 +60,7 @@ export const NewsListItemWrapper = styled.div`
   min-height: 120px;
   &:after {
     display: block;
-    content: '';
+    content: "";
     width: 100%;
     height: 2px;
     background-color: #c8c8c8;

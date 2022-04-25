@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { MoreNewsSectionWrapper, MoreNewsList } from './style';
-import EventItem from './EventItem';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { FC } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { MoreNewsSectionWrapper, MoreNewsList } from "./style";
+import EventItem from "./EventItem";
 
 const MoreEventSection: FC = () => {
   const event = useStaticQuery(graphql`
@@ -28,9 +28,9 @@ const MoreEventSection: FC = () => {
     <MoreNewsSectionWrapper>
       <div className="headerTitle">More Event</div>
       <MoreNewsList>
-        {event.allMarkdownRemark.edges.map(({ node }) => {
-          return <EventItem {...node} key={node.frontmatter.path} />;
-        })}
+        {event.allMarkdownRemark.edges.map(({ node }) => (
+          <EventItem {...node} key={node.frontmatter.path} />
+        ))}
       </MoreNewsList>
     </MoreNewsSectionWrapper>
   );

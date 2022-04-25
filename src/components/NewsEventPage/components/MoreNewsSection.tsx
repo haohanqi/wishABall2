@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { MoreNewsSectionWrapper, MoreNewsList } from './style';
-import NewsItem from './NewsItem';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { FC } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { MoreNewsSectionWrapper, MoreNewsList } from "./style";
+import NewsItem from "./NewsItem";
 
 const MoreNewsSection: FC = () => {
   const news = useStaticQuery(graphql`
@@ -28,9 +28,9 @@ const MoreNewsSection: FC = () => {
     <MoreNewsSectionWrapper>
       <div className="headerTitle">More News</div>
       <MoreNewsList>
-        {news.allMarkdownRemark.edges.map(({ node }: any) => {
-          return <NewsItem {...node} key={node.frontmatter.path} />;
-        })}
+        {news.allMarkdownRemark.edges.map(({ node }: any) => (
+          <NewsItem {...node} key={node.frontmatter.path} />
+        ))}
       </MoreNewsList>
     </MoreNewsSectionWrapper>
   );

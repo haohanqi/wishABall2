@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { Row, Col } from 'antd';
+import React, { useState } from "react";
+import { Row, Col } from "antd";
 import {
   WishSectionWrapper,
   WishInfoWrapper,
   WishImgWrapper,
   WishButtonWrapper,
   PromoBox,
-} from './style';
-import SocialMediaGroup from '../../CommonComponents/SocialMediaGroup';
-import WishButton from '../../CommonComponents/WishButton';
-import { BasicColor } from '../../BasicStyle';
-import BasicVideoModal from './BasicVideoModal';
-import wechat from '../../../images/wechat.png';
-import ins from '../../../images/ins.png';
-import facebook from '../../../images/facebook.png';
-import wish from '../../../images/wish.jpg';
-import wish2 from '../../../images/wish2.jpg';
-import wish3 from '../../../images/wish3.jpg';
+} from "./style";
+import SocialMediaGroup from "../../CommonComponents/SocialMediaGroup";
+import WishButton from "../../CommonComponents/WishButton";
+import { BasicColor } from "../../BasicStyle";
+import BasicVideoModal from "./BasicVideoModal";
+import wechat from "../../../images/wechat.png";
+import ins from "../../../images/ins.png";
+import facebook from "../../../images/facebook.png";
+import wish from "../../../images/wish.jpg";
+import wish2 from "../../../images/wish2.jpg";
+import wish3 from "../../../images/wish3.jpg";
 
 const WishSection = () => {
   const [open, setOpen] = useState(false);
@@ -40,13 +40,13 @@ const WishSection = () => {
         setOpen={setOpenTeamKidModal}
         videoSrc="https://www.youtube.com/embed/TviHrZ2hAEQ"
       />
-      <Row justify="space-around" align="middle" style={{ minHeight: '100vh' }}>
+      <Row justify="space-around" align="middle" style={{ minHeight: "100vh" }}>
         <Col xl={6} lg={6} md={16} sm={22} xs={22}>
           <WishInfoWrapper>
             <div className="wishTitle">
               <span>W</span>
               <span>i</span>
-              <span style={{ color: '#FBB040' }}>s</span>
+              <span style={{ color: "#FBB040" }}>s</span>
               <span>h</span>
             </div>
             <p className="wishDescription">
@@ -60,10 +60,7 @@ const WishSection = () => {
               organization.
             </p>
 
-            <SocialMediaGroup
-              imgs={[wechat, ins, facebook]}
-              mobileHidden={true}
-            />
+            <SocialMediaGroup imgs={[wechat, ins, facebook]} mobileHidden />
           </WishInfoWrapper>
         </Col>
         <Col xl={6} lg={6} md={16} sm={24} xs={24}>
@@ -83,7 +80,7 @@ const WishSection = () => {
                 backgroundImage={wish3}
                 width="48%"
                 height="100%"
-                small={true}
+                small
                 onClick={() => {
                   setOpenOseKidModal(true);
                 }}
@@ -95,7 +92,7 @@ const WishSection = () => {
                 backgroundImage={wish2}
                 width="48%"
                 height="100%"
-                small={true}
+                small
                 onClick={() => {
                   setOpenTeamKidModal(true);
                 }}
@@ -108,7 +105,7 @@ const WishSection = () => {
         </Col>
         <Col xl={6} lg={6} md={16} sm={24} xs={24}>
           <WishButtonWrapper>
-            <WishButton buttonText="Find Your Wish"></WishButton>
+            <WishButton buttonText="Find Your Wish" />
           </WishButtonWrapper>
         </Col>
       </Row>

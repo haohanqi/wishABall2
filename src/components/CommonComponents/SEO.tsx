@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { FC } from "react";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 type SEOProps = {
   description: string;
@@ -68,8 +68,8 @@ const SEO: FC<SEOProps> = ({
           : [],
       )}
     >
-      <html lang={lang ? lang : 'en'} />
-      <title itemProp="name" lang={lang ? lang : 'en'}>
+      <html lang={lang || "en"} />
+      <title itemProp="name" lang={lang || "en"}>
         {`OSE (over sea education and sports) ${title}`}
       </title>
       <meta name="description" content={description} />

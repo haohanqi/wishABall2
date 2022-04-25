@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { SocialMediaGroupWrapper, SocialMediaItem } from './style';
+import React, { FC } from "react";
+import { SocialMediaGroupWrapper, SocialMediaItem } from "./style";
 
 export type SocialMediaGroupProps = {
   imgs?: string[];
@@ -12,14 +12,12 @@ const SocialMediaGroup: FC<SocialMediaGroupProps> = ({
   imgs,
   width,
   height,
-}: SocialMediaGroupProps) => {
-  return (
-    <SocialMediaGroupWrapper width={width} height={height}>
-      {imgs.map((src) => (
-        <SocialMediaItem key={src} src={src} alt="soical media" />
-      ))}
-    </SocialMediaGroupWrapper>
-  );
-};
+}: SocialMediaGroupProps) => (
+  <SocialMediaGroupWrapper width={width} height={height}>
+    {imgs.map((src) => (
+      <SocialMediaItem key={src} src={src} alt="soical media" />
+    ))}
+  </SocialMediaGroupWrapper>
+);
 
 export default SocialMediaGroup;

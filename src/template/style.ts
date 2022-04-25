@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NewsBanner = styled.div`
   width: 100%;
@@ -50,7 +50,7 @@ export const NewsPageContainer = styled.section`
   width: 100%;
   min-width: 320px;
   padding: 5% 10%;
-  background-color: '#fafafa';
+  background-color: "#fafafa";
   column-gap: 30px;
   row-gap: 30px;
 
