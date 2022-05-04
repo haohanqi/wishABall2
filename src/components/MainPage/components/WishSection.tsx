@@ -1,5 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { Row, Col } from "antd";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogDisclosure,
+  useDialogState,
+} from "reakit";
 import {
   WishSectionWrapper,
   WishInfoWrapper,
@@ -18,28 +24,36 @@ import wish from "../../../images/wish.jpg";
 import wish2 from "../../../images/wish2.jpg";
 import wish3 from "../../../images/wish3.jpg";
 
-const WishSection = () => {
-  const [open, setOpen] = useState(false);
-  const [openOseKidModal, setOpenOseKidModal] = useState(false);
-  const [openOseTeamModal, setOpenTeamKidModal] = useState(false);
-
+const WishSection: FC = () => {
+  const modal = useDialogState({ visible: false });
+  const openOseKidModal = useDialogState({ visible: false });
+  const openOseTeamModal = useDialogState({ visible: false });
   return (
     <WishSectionWrapper backgroundColor={BasicColor.primaryColor}>
-      <BasicVideoModal
-        open={open}
-        setOpen={setOpen}
-        videoSrc="https://www.youtube.com/embed/3l3UR-GjRGQ"
-      />
-      <BasicVideoModal
-        open={openOseKidModal}
-        setOpen={setOpenOseKidModal}
-        videoSrc="https://www.youtube.com/embed/3Z-izRLX35k"
-      />
-      <BasicVideoModal
-        open={openOseTeamModal}
-        setOpen={setOpenTeamKidModal}
-        videoSrc="https://www.youtube.com/embed/TviHrZ2hAEQ"
-      />
+      <DialogBackdrop {...modal}>
+        <Dialog {...modal} aria-label="video modal">
+          <BasicVideoModal
+            modal={modal}
+            videoSrc="https://www.youtube.com/embed/3l3UR-GjRGQ"
+          />
+        </Dialog>
+      </DialogBackdrop>
+      <DialogBackdrop {...openOseKidModal}>
+        <Dialog {...openOseKidModal} aria-label="video modal">
+          <BasicVideoModal
+            modal={openOseKidModal}
+            videoSrc="https://www.youtube.com/embed/3Z-izRLX35k"
+          />
+        </Dialog>
+      </DialogBackdrop>
+      <DialogBackdrop {...openOseTeamModal}>
+        <Dialog {...openOseTeamModal} aria-label="video modal">
+          <BasicVideoModal
+            modal={openOseTeamModal}
+            videoSrc="https://www.youtube.com/embed/TviHrZ2hAEQ"
+          />
+        </Dialog>
+      </DialogBackdrop>
       <Row justify="space-around" align="middle" style={{ minHeight: "100vh" }}>
         <Col xl={6} lg={6} md={16} sm={22} xs={22}>
           <WishInfoWrapper>
@@ -69,11 +83,11 @@ const WishSection = () => {
               backgroundImage={wish}
               height="70%"
               onClick={() => {
-                setOpen(true);
+                modal.toggle();
               }}
             >
-              <div className="promoTitle">OSE BASKETBALL</div>
-              <div className="promoDes">Oversea Sports and Education</div>
+              <h1 className="promoTitle">OSE BASKETBALL</h1>
+              <h2 className="promoDes">Oversea Sports and Education</h2>
             </PromoBox>
             <div className="promoRow">
               <PromoBox
@@ -82,23 +96,24 @@ const WishSection = () => {
                 height="100%"
                 small
                 onClick={() => {
-                  setOpenOseKidModal(true);
+                  openOseKidModal.toggle();
                 }}
               >
-                <div className="promoTitle">OBA Kid</div>
-                <div className="promoDes">OBA Kids Training</div>
+                <h1 className="promoTitle">OBA Kid</h1>
+                <h2 className="promoDes">OBA Kids Training</h2>
               </PromoBox>
+
               <PromoBox
                 backgroundImage={wish2}
                 width="48%"
                 height="100%"
                 small
                 onClick={() => {
-                  setOpenTeamKidModal(true);
+                  openOseTeamModal.toggle();
                 }}
               >
-                <div className="promoTitle">OBA</div>
-                <div className="promoDes">Oversea BasketBall Team</div>
+                <h1 className="promoTitle">OBA</h1>
+                <h2 className="promoDes">Oversea BasketBall Team</h2>
               </PromoBox>
             </div>
           </WishImgWrapper>

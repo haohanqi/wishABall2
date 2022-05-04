@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { FC } from "react";
 import { graphql } from "gatsby";
 import SEO from "@/components/CommonComponents/SEO";
 import { NewsBanner, EventPageContainer, NewTitle, EventField } from "./style";
 
-const EventPage = ({ data }) => {
+const EventPage: FC<{ data: any }> = ({ data }) => {
   const { title, date, location } = data.markdownRemark.frontmatter;
 
   return (
@@ -38,6 +38,7 @@ const EventPage = ({ data }) => {
 
         <div
           style={{ width: "100%", maxWidth: "500px" }}
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </EventPageContainer>

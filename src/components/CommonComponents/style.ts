@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { Button } from "reakit/Button";
 import { BasicColor, SmallTitle, SmallText, MediumTitle } from "../BasicStyle";
 import { SocialMediaGroupProps } from "./SocialMediaGroup";
 import { Sliders } from "./AdverSlider";
+
 // types
 type HeaderProps = {
   backgroundColor: BasicColor;
@@ -102,9 +104,13 @@ export const LogoWrapper = styled.div<LogoProps>`
 export const NavBar = styled.nav`
   box-sizing: border-box;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+  .navMenu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
   .navText {
     ${SmallText};
@@ -383,7 +389,7 @@ export type WishButtonLayoutProps = {
   height?: string;
   width?: string;
 };
-export const WishButtonLayout = styled.div<WishButtonLayoutProps>`
+export const WishButtonLayout = styled(Button)<WishButtonLayoutProps>`
   width: ${(props) => (props.width ? props.width : "85%")};
   height: ${(props) => (props.height ? props.height : "60px")};
   display: flex;
@@ -402,7 +408,7 @@ export const WishButtonLayout = styled.div<WishButtonLayoutProps>`
   transition: 0.5s ease-out;
   &:hover {
     background-position: left bottom;
-    ${SmallTitle};
+    font-size: 0.8rem;
   }
 
   .arrow {

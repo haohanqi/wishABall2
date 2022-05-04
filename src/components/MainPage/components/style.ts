@@ -276,6 +276,7 @@ export const PromoBox = styled.div<PromoBoxProps>`
     ${(props) => (props.small ? "margin-bottom:15px" : "margin-bottom:20px")};
     transition: all 0.4s linear;
     z-index: 1;
+    color: white;
   }
 
   .promoDes {
@@ -283,6 +284,7 @@ export const PromoBox = styled.div<PromoBoxProps>`
     ${(props) => (props.small ? "font-size:0.65rem" : `${SmallText}`)};
     transition: all 0.4s linear;
     z-index: 1;
+    color: white;
   }
 
   &:hover {

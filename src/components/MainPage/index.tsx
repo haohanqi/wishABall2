@@ -1,21 +1,20 @@
-import React from "react";
+import React, { FC } from "react";
 import EntrySection from "./components/EntrySection";
 import NewsSection from "./components/NewsSection";
 import WishSection from "./components/WishSection";
 import AboutUsSection from "./components/AboutUsSection";
 import SEO from "../CommonComponents/SEO";
 
-const MainPage = () => (
+const MainPage: FC = () => (
   <>
     <SEO
-      description="OSE Overseas Sports And Education"
+      title="OSE - Overseas Sports And Education"
+      description="OSE serves as a multi-platform organisation which focuses on sports and wellness, sporting news, culture and education"
       keywords={[
-        "OSE Main Page",
+        "OSE",
         "Overseas Sports And Education",
-        "OSE news",
-        "OSE About us",
-        "OSE Wish",
-        "OSE Contact us",
+        "Child Sports Training",
+        "Child Sports Education",
       ]}
     />
     <EntrySection />

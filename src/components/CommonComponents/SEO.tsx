@@ -31,51 +31,20 @@ const SEO: FC<SEOProps> = ({
   `);
   const metaDescription = description || data.site.siteMetadata.description;
   const metaUrl = `${data.site.siteMetadata.siteUrl}/${pathname}`;
+  const keywordsString = keywords.join(`, `);
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:url`,
-          content: metaUrl,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-      ].concat(
-        keywords.length > 0
-          ? {
-              name: `keywords`,
-              content: keywords.join(`, `),
-            }
-          : [],
-      )}
-    >
+    <Helmet>
       <html lang={lang || "en"} />
       <title itemProp="name" lang={lang || "en"}>
-        {`OSE (over sea education and sports) ${title}`}
+        {`OSE (oversea education and sports) ${title}`}
       </title>
       <meta name="description" content={description} />
       {metaUrl && <meta property="og:url" content={metaUrl} />}
       {title && <meta property="og:title" content={title} />}
-      {description && <meta property="og:description" content={description} />}
+      {description && (
+        <meta property="og:description" content={metaDescription} />
+      )}
+      <meta property="keywords" content={keywordsString} />
     </Helmet>
   );
 };

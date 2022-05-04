@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { Row, Col, Carousel } from "antd";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import AdverSlider from "../../CommonComponents/AdverSlider";
@@ -10,7 +10,7 @@ import {
 } from "./style";
 import { BasicColor } from "../../BasicStyle";
 
-const NewsSection = () => {
+const NewsSection: FC = () => {
   const event = useStaticQuery(graphql`
     query BlogList {
       allMarkdownRemark(

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import { EntrySectionWrapper } from "./style";
 import main from "../../../images/main.jpg";
 import { BasicColor } from "../../BasicStyle";
 
-const EntrySection = () => (
+const EntrySection: FC = () => (
   <EntrySectionWrapper backgroundColor={BasicColor.thirdColor} padding="0%">
     <img
       src={main}

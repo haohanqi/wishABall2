@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 // eslint-disable-next-line import/no-unresolved
 import SEO from "components/CommonComponents/SEO";
@@ -8,12 +8,16 @@ import {
   ContactFormSection,
 } from "./style";
 
-const ContactUsPage = () => (
+const ContactUsPage: FC = () => (
   <ContactUsPageContainer>
     <SEO
       pathname="contactUsPage"
-      keywords={["OSE Contact Page", "OSE Contact Us"]}
-      description="contact information"
+      keywords={[
+        "OSE Contact Page",
+        "OSE Contact Us",
+        "OSE Contact Information",
+      ]}
+      description="ose (oversea sports and education) contact information"
     />
     <ContactUsSection>
       <StaticImage

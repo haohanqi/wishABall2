@@ -1,22 +1,18 @@
 import React, { FC } from "react";
+import { DialogStateReturn } from "reakit";
 import VideoModal from "./videoModal";
 
 type BasicVideoModalProps = {
-  open: boolean;
-  setOpen: any;
+  modal: DialogStateReturn;
   videoSrc: string;
 };
 
-const BasicVideoModal: FC<BasicVideoModalProps> = ({
-  open,
-  setOpen,
-  videoSrc,
-}) => (
+const BasicVideoModal: FC<BasicVideoModalProps> = ({ videoSrc, modal }) => (
   <>
-    {open && (
+    {modal.show && (
       <VideoModal
         onClick={() => {
-          setOpen(!open);
+          modal.toggle();
         }}
       >
         <iframe
