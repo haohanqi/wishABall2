@@ -54,6 +54,25 @@ export const NewsPageContainer = styled.section`
   column-gap: 30px;
   row-gap: 30px;
 
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  td {
+    border: 1px solid black;
+  }
+
+  th {
+    border: 1px solid black;
+    text-align: left;
+  }
+
   @media only screen and (max-width: 480px) {
     padding: 10% 10%;
   }

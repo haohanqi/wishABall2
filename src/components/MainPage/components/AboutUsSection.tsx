@@ -14,7 +14,7 @@ import { BasicColor } from "../../BasicStyle";
 import entrySection from "../../../images/entrySection.jpg";
 import readSection from "../../../images/read.jpg";
 
-const AboutUsSection = () => {
+const AboutUsSection: FC = () => {
   type WorkWithUsItemProps = {
     title: string;
     des: string;

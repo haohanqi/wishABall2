@@ -1,11 +1,6 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { Row, Col } from "antd";
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogDisclosure,
-  useDialogState,
-} from "reakit";
+import { Dialog, DialogBackdrop, useDialogState } from "reakit";
 import {
   WishSectionWrapper,
   WishInfoWrapper,
