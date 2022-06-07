@@ -54,6 +54,11 @@ export const NewsPageContainer = styled.section`
   column-gap: 30px;
   row-gap: 30px;
 
+  img {
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+
   h3 {
     margin-bottom: 10px;
   }
