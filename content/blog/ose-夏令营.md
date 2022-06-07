@@ -1,5 +1,5 @@
 ---
-path: /blog/5
+path: /blog/6
 date: 2022-06-06T23:59:20.774Z
 title: OSE 夏令营
 ---
