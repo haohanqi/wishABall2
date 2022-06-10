@@ -95,10 +95,10 @@ title: OHBL Week One Basketball
 
 | Team Names               | Win | Loss |
 | ------------------------ | --- | ---- |
-| OBA U10 North            | 0   | 1    |
+| OBA U10 North            | 1   | 0    |
 | OBA U10 South            | 0   | 1    |
-| Bravo U10                | 1   | 1    |
-| Leading Intelligence U10 | 1   | 1    |
+| Bravo U10                | 0   | 1    |
+| Leading Intelligence U10 | 1   | 0    |
 
 # U10 Teams Member Scores
 
@@ -108,56 +108,65 @@ title: OHBL Week One Basketball
 | ------------- | ------------- | ------ |
 | Amanda        | 6             | 4      |
 | Jackie        | 4             | 0      |
-| Alvin         | 7             | 0      |
-| Isabella      | 9             | 7      |
-| Ethan         | 3             | 4      |
-| Amelia        | 30            | 2      |
+| Amelia        | 9             | 8      |
+| Daisy         | 9             |        |
+| Yao           | 5             | 4      |
+| Tony          | 30            | 0      |
+| Herman        | 0             | 2      |
+| Francise      | 1             | 0      |
+| Austin        | 6             | 8      |
+| Matthew       | 8             | 12     |
+
 
 ### OBA U10 South
 
 | OBA U10 South | Jersey Number | Scores |
 | ------------- | ------------- | ------ |
-| Boyu          | 8             | 0      |
-| Eason         | 30            | 0      |
-| Aider         | 6             | 0      |
-| Steven        | 4             | 0      |
-| Garen         | 7             | 0      |
-| Jayden        | 3             | 2      |
-| Lucas         | 5             | 0      |
-| Ayden         | 9             | 0      |
-| Herman        | 1             | 0      |
+| Boyu          | 1             | 0      |
+| Eason         | 7             | 1      |
+| Aider         | 9             | 0      |
+| Garen         | 5             | 0      |
+| Jayden        | 3             | 0      |
+| Lucas         | 4             | 0      |
 | Alfred        | 0             | 10     |
 
 ### Bravo U10
 
 | Bravo U10 | Jersey Number | Scores |
 | --------- | ------------- | ------ |
-| Matthew   | 3             | 0      |
+| Matthew   | 3             | 2      |
+| Jayden    | 2             | 0      |
+| Ethan     | 15            | 0      |
+| Jerry     | 5             | 0      |
+| Sebastian | 11            | 0      |
 | Anson     | 30            | 0      |
-| Bas       | 11            | 17     |
-| Jaden     | 0             | 0      |
-| Ethan     | 00            | 0      |
+| Jessie    | 55            | 0      |
+
+
 
 ### Leading Intelligence U10
 
 | Leading Intelligence U10 | Jersey Number | Scores |
 | ------------------------ | ------------- | ------ |
-| Ryan                     | 15            | 2      |
-| Feynman                  | 75            | 0      |
+| Ryan                     | 15            | 0      |
+| Brian                    | 7             | 0      |
 | Antony                   | 6             | 4      |
-| Derek                    | 24            | 6      |
-| Devyn                    | 3             | 10     |
-| David                    | 30            | 3      |
-| Boclo                    | 18            | 6      |
+| Derek                    | 24            | 8      |
+| Devyn                    | 3             | 0      |
+| David                    | 30            | 4      |
+| Boclo                    | 18            | 2      |
+| Janet                    | 13            | 2      |
+| Aiken                    | 26            | 2      |
+| Jason                    | 1             | 6      |
 
 # Game Final Score
 
 | Game 1                   |     |
 | ------------------------ | --- |
-| Leading Intelligence U10 | 43  |
-| OBA U10 South            | 12  |
+| Leading Intelligence U10 | 28  |
+| Bravo U10                | 2   |
 
 | Game 2        |     |
 | ------------- | --- |
-| Bravo U10     | 19  |
-| OBA U10 North | 17  |
+| OBA U10 South | 1   |
+| OBA U10 North | 42  |
