@@ -16,6 +16,7 @@ const NewsSection: FC = () => {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/blog/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 5
       ) {
         edges {
           node {
