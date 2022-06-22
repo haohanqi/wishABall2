@@ -2,6 +2,7 @@
 path: /blog/7
 date: 2022-06-10T10:24:18.619Z
 title: OHBL Week Two Basketball
+bannerImage: /assets/wechatimg2.jpeg
 ---
 # U12 Teams Win And Loss
 
