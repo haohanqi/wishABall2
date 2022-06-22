@@ -56,6 +56,9 @@ pre {
 
 a {
   background-color: transparent;
+  &:focus {
+    outline: blue solid 2px;
+  }
 }
 
 /**
@@ -180,8 +183,14 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
+  border: none;
   padding: 0;
+  background-color:transparent ;
+}
+
+button {
+  border: none;
+  background-color:transparent ;
 }
 
 /**

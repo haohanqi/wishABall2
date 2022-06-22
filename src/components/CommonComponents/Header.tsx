@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "gatsby";
+import { MenuItem, MenuBar, useMenuBarState } from "reakit/Menu";
 import Logo from "./Logo";
 import SocialMediaGroup from "./SocialMediaGroup";
 import { HeaderWrapper, NavBar, MobileNavMenuWrapper } from "./style";
@@ -22,11 +23,12 @@ const MobileNavMenu: FC<{
       overflowY: "scroll",
     });
   }, []);
+  const menu = useMenuBarState();
 
   return (
     <MobileNavMenuWrapper
+      aria-label="mobile-main-navigation"
       className="MobileNavMenuWrapper"
-      role="navigation"
       aria-hidden={visible}
     >
       <AiOutlineClose
@@ -35,30 +37,33 @@ const MobileNavMenu: FC<{
         role="button"
         aria-label="mobile navigation close button"
       />
-      <div className="mobileNavBar" role="menu">
-        <Link to="/">
-          <div className="mobileNavItem" role="menuitem">
+      <MenuBar className="mobileNavBar" {...menu}>
+        <MenuItem {...menu}>
+          <Link to="/" className="mobileNavItem">
             ABOUT US
-          </div>
-        </Link>
-        <Link to="/newsPage">
-          <div className="mobileNavItem" role="menuitem">
+          </Link>
+        </MenuItem>
+        <MenuItem {...menu}>
+          <Link to="/newsPage" className="mobileNavItem">
             NEWS
-          </div>
-        </Link>
-        <Link to="/contactUsPage">
-          <div className="mobileNavItem" role="menuitem">
+          </Link>
+        </MenuItem>
+        <MenuItem {...menu}>
+          <Link to="/contactUsPage" className="mobileNavItem">
             CONTACT US
-          </div>
-        </Link>
-        <div className="mobileNavItem" role="menuitem">
-          MORE
-        </div>
+          </Link>
+        </MenuItem>
+        <MenuItem {...menu}>
+          <Link to="/comingSoonPage" className="mobileNavItem">
+            MORE
+          </Link>
+        </MenuItem>
+
         <SocialMediaGroup
           imgs={[insIcon, wechatIcon, facebookIcon]}
           width="80%"
         />
-      </div>
+      </MenuBar>
     </MobileNavMenuWrapper>
   );
 };
@@ -69,6 +74,7 @@ const Header: FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   }, []);
+  const menu = useMenuBarState({ orientation: "horizontal" });
 
   const showMobileNavMenu = () => {
     const t1 = gsap.timeline();
@@ -162,28 +168,30 @@ const Header: FC = () => {
             sm={0}
             xs={0}
           >
-            <NavBar role="navigation">
-              <div className="navMenu" role="menu">
-                <Link to="/">
-                  <div className="navText">Home</div>
-                </Link>
-
-                <Link to="/newsPage">
-                  <div className="navText">NEWS</div>
-                </Link>
-
-                <Link to="https://oseca.square.site/s/appointments">
-                  <div className="navText">OSE PROGRAM</div>
-                </Link>
-
-                <Link to="/contactUsPage">
-                  <div className="navText">CONTACT US</div>
-                </Link>
-
-                <Link to="/comingSoonPage">
-                  <div className="navText">COMING SOON</div>
-                </Link>
-              </div>
+            <NavBar aria-label="desktop-main-navigation">
+              <MenuBar
+                className="navMenu"
+                {...menu}
+                aria-label="navigation-menu"
+              >
+                <MenuItem {...menu}>
+                  <Link to="/">Home</Link>
+                </MenuItem>
+                <MenuItem {...menu}>
+                  <Link to="/newsPage">NEWS</Link>
+                </MenuItem>
+                <MenuItem {...menu}>
+                  <Link to="https://oseca.square.site/s/appointments">
+                    OSE PROGRAM
+                  </Link>
+                </MenuItem>
+                <MenuItem {...menu}>
+                  <Link to="/contactUsPage">CONTACT US</Link>
+                </MenuItem>
+                <MenuItem {...menu}>
+                  <Link to="/comingSoonPage">COMING SOON</Link>
+                </MenuItem>
+              </MenuBar>
 
               {/* <LanguageTransButton mobileHidden={true} /> */}
             </NavBar>

@@ -140,6 +140,15 @@ export const NavBar = styled.nav`
     transition: all 0.3s linear;
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+    color: ${BasicColor.secondaryColor};
+    a {
+      color: ${BasicColor.secondaryColor};
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     justify-content: flex-end;
     .navText {
